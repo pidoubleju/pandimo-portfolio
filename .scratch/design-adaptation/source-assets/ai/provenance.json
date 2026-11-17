@@ -1,0 +1,17 @@
+{
+  "note": "Original supplied portfolio artwork. No separate artwork license notice was exposed by the source. Original file is retained unchanged. WebP delivery uses quality 95, a maximum width of 1760px and no upscaling.",
+  "assets": [
+    {
+      "file": "on-brand-illustration.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/80f4350592c817263184390ebb3004ad53d994aa.png",
+      "dimensions": [2048, 2048],
+      "sha256": "e680a38bc560cff827f8a2d75d6e788ad2d2fcbfb1be739603aa34281a129733",
+      "format": "png",
+      "delivery": {
+        "file": "on-brand-illustration.webp",
+        "width": 1760,
+        "height": 1760
+      }
+    }
+  ]
+}

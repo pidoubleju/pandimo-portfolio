@@ -400,3 +400,58 @@ production gate returned HTTP 200 for the Paid route and all three assets. Its
 previous/next URLs and no horizontal overflow; the 61.27px columns keep the word
 “templates” whole. Domain-root output remains restored and the worktree is clean
 at handoff.
+
+## Ticket 06: complete AI-assisted imagery
+
+The AI desktop and mobile Figma frames were visually inspected on the signed-in
+canvas at 50% zoom, including the introduction, illustration, point of view,
+four divided approach rows, principle callout and final overview/contact links.
+Desktop keeps an 880 × 640 illustration crop in the 880px content column. The
+375px mobile design uses a 287 × 387 portrait crop of the same artwork; the crop
+scales proportionally at nearby widths. Both sizes stack each approach heading
+above its prose. The beige principle panel retains its two-line heading and
+compact Space Grotesk description. Runtime screenshots of the desktop artwork
+and point of view/rows, and mobile artwork/principle/footer, were compared with
+the inspected canvas composition.
+
+All original figure copy, point of view, approach rows and principle copy live
+in named, validated `aiAssistedImagery` fields in the canonical Markdown record.
+The page's distinct Astro composition uses the existing stacked `ContentRows`,
+shared introduction and fixed-sequence footer. Existing site Markdown already
+holds the original overview/contact/footer labels. The production main text
+exactly matches the source inventory after whitespace normalization (1,797
+characters on each side), with no hidden responsive duplicates.
+
+The original 2048 × 2048 PNG remains unchanged in
+`.scratch/design-adaptation/source-assets/ai/`, with source URL, format,
+dimensions and SHA-256 hash recorded in `provenance.json`. Its local WebP delivery
+variant is 1760 × 1760 at quality 95 without upscaling. The inline image has
+explicit dimensions, descriptive alt text and lazy loading. No separate artwork
+license notice was exposed by the supplied portfolio source; no artwork or copy
+was generated or substituted. Existing font and icon license notices remain.
+
+Existing source checks and `yarn validate` pass, as do the `/portfolio-check/`
+production build and existing `check:build`. Source and production browser
+inspection covered 1280px, 768px, 390px and 320px without horizontal overflow.
+The prefixed direct route loaded the illustration, local menu module and both
+original font families with HTTP 200 responses. Native previous navigation
+reached Paid & organic content, overview reached the front-page `#work`, top
+returned to scroll position zero, and the header Contact link reached the
+front-page `#contact`. The contact anchor retains the original email destination.
+Keyboard Tab reached the footer contact anchor with its visible 2px focus outline.
+The restored root production direct route also loaded its local image/fonts and
+retained the correct root overview, previous, contact and top destinations.
+
+An actual same-origin sandbox iframe without `allow-scripts` verified the
+prefixed page at 320px: all four approach rows and the complete principle remained,
+all four header links were visible, the menu toggle stayed hidden, and there was
+no horizontal overflow. Its native previous link opened Paid & organic content.
+Browser evaluation sometimes reported failure during native page navigation;
+the subsequent destination reads confirmed those navigations completed.
+
+Only existing checks and browser/read-only shell verification were used, as
+requested; no tests or verifier coverage were added. Canvas/runtime visual
+inspection is not an exported pixel-diff baseline, so exact pixel equivalence
+is not asserted. The source dev server was restarted after content-schema HMR
+left a stale content store. Domain-root production output is restored before
+handoff; no deployment or CMS connection was made.

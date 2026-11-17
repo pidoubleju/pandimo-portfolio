@@ -13,31 +13,31 @@ Reuse coherent visual patterns without introducing a universal page builder.
 
 **Blocked by:** 01 — Browse the real front page and expertise introductions.
 
-**Status:** ready-for-agent
+**Status:** implemented; code review in progress
 
-- [ ] Migrate the complete existing body, including the illustration and caption,
+- [x] Migrate the complete existing body, including the illustration and caption,
       point of view, four approach rows, principle callout and footer copy without
       rewriting any displayed text.
-- [ ] Preserve the page's full-width illustration, divided rows, callout and
+- [x] Preserve the page's full-width illustration, divided rows, callout and
       desktop/mobile hierarchy with flexible intermediate layouts.
-- [ ] Copy, groups and media references live in validated Markdown content. Reuse
+- [x] Copy, groups and media references live in validated Markdown content. Reuse
       existing row, figure and callout patterns where applicable while keeping
       the distinct page composition.
-- [ ] The original illustration is local with explicit dimensions and appropriate
+- [x] The original illustration is local with explicit dimensions and appropriate
       alt text; it retains its designed crop and source quality.
-- [ ] Previous navigation opens Paid & organic content. The overview link reaches
+- [x] Previous navigation opens Paid & organic content. The overview link reaches
       the front-page work section, the contact link opens the existing email
       destination, and header/top links work without JavaScript.
-- [ ] Verify exact copy, responsive layouts, direct-route access, root and
+- [x] Verify exact copy, responsive layouts, direct-route access, root and
       prefixed links/media, and passing repository checks.
 
-- [ ] The delivered surface matches the original palette, typography, spacing,
+- [x] The delivered surface matches the original palette, typography, spacing,
       artwork, and intended desktop/mobile composition, and remains usable at
       intermediate widths and 320px without accidental horizontal overflow.
-- [ ] Core content and navigation work without JavaScript. Any agreed enhancement
+- [x] Core content and navigation work without JavaScript. Any agreed enhancement
       preserves keyboard access and visible focus; images remain inline.
-- [ ] Content and local assets resolve under both domain-root and repository-prefix
+- [x] Content and local assets resolve under both domain-root and repository-prefix
       hosting. Existing source and production-build checks pass, with meaningful
       verification of the behavior delivered by this ticket.
-- [ ] No CMS connection or public deployment is required by this ticket. Retain
+- [x] No CMS connection or public deployment is required by this ticket. Retain
       applicable asset licenses and do not substitute invented copy or artwork.

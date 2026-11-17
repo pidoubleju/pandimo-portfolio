@@ -1,8 +1,111 @@
 ---
+import ContentRows from '../components/ContentRows.astro';
 import ExpertiseLayout from '../layouts/ExpertiseLayout.astro';
 import { getExpertise } from '../lib/content';
+import { withBase } from '../lib/paths';
 
 const area = await getExpertise('ai-assisted-imagery');
+const content = area.data.aiAssistedImagery;
+if (!content) throw new Error('AI-assisted imagery body content is missing');
+const { illustration, pointOfView, approach, principle } = content;
 ---
 
-<ExpertiseLayout area={area} />
+<ExpertiseLayout area={area}>
+  <figure class="illustration">
+    <img
+      src={withBase(illustration.image.src)}
+      width={illustration.image.width}
+      height={illustration.image.height}
+      alt={illustration.image.alt}
+      loading="lazy"
+      decoding="async"
+    />
+    <figcaption class="muted">{illustration.caption}</figcaption>
+  </figure>
+
+  <section
+    class="point-of-view copy-stack"
+    aria-labelledby="point-of-view-heading"
+  >
+    <p class="label">{pointOfView.label}</p>
+    <h2 id="point-of-view-heading">{pointOfView.heading}</h2>
+    <p>{pointOfView.description}</p>
+    <p class="muted">{pointOfView.context}</p>
+  </section>
+
+  <section class="approach" aria-labelledby="approach-heading">
+    <h2 class="label" id="approach-heading">
+      {approach.label}
+    </h2>
+    <ContentRows items={approach.items} stacked />
+  </section>
+
+  <section class="principle" aria-labelledby="principle-heading">
+    <p class="label">{principle.label}</p>
+    <h2 id="principle-heading">
+      {principle.heading.map((line) => (
+        <span class="heading-line">{line}</span>
+      ))}
+    </h2>
+    <p class="principle-description">{principle.description}</p>
+  </section>
+</ExpertiseLayout>
+
+<style>
+  .illustration {
+    margin-top: var(--space-medium);
+  }
+
+  .illustration img {
+    width: 100%;
+    aspect-ratio: 880 / 640;
+    object-fit: cover;
+    border-radius: var(--radius);
+  }
+
+  figcaption {
+    margin-top: var(--space-layout);
+    font: 400 var(--text-ui) / var(--leading-heading) var(--font-heading);
+  }
+
+  .point-of-view,
+  .principle {
+    margin-top: var(--space-section);
+  }
+
+  .point-of-view h2 {
+    font-size: var(--text-section-heading);
+  }
+
+  .approach {
+    margin-top: var(--space-layout);
+  }
+
+  .approach h2 {
+    margin-bottom: var(--space-layout);
+  }
+
+  .principle {
+    padding: var(--space-medium);
+    background: var(--callout);
+  }
+
+  .principle h2 {
+    margin-block: var(--space-small);
+    font-size: var(--text-subsection);
+  }
+
+  .principle-description {
+    font: 400 var(--text-ui) / var(--leading-heading) var(--font-heading);
+  }
+
+  @media (max-width: 700px) {
+    .illustration img {
+      aspect-ratio: 287 / 387;
+    }
+
+    .point-of-view h2 {
+      font-size: var(--text-section-heading-mobile);
+    }
+  }
+</style>

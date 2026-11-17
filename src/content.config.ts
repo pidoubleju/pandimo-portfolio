@@ -101,6 +101,16 @@ const paidOrganicContent = z.object({
     note: text,
   }),
 });
+const aiAssistedImagery = z.object({
+  illustration: z.object({ image, caption: text }),
+  pointOfView: proseItem.extend({ label: text, context: text }),
+  approach: z.object({ label: text, items: z.array(proseItem).length(4) }),
+  principle: z.object({
+    label: text,
+    heading: z.array(text).length(2),
+    description: text,
+  }),
+});
 const brandGuidelines = z.object({
   exploration: z.object({
     sevdesk: z.object({ heading: text, description: text, linkLabel: text }),
@@ -165,6 +175,7 @@ const expertise = defineCollection({
     brandGuidelines: brandGuidelines.optional(),
     merchBrandExperience: merchBrandExperience.optional(),
     paidOrganicContent: paidOrganicContent.optional(),
+    aiAssistedImagery: aiAssistedImagery.optional(),
     nextLabel: text.optional(),
     nextLinkLabel: text.optional(),
   }),
