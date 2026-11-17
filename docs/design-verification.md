@@ -286,9 +286,11 @@ Shared global focus styling and the native link semantics are retained.
 
 The browser host intermittently disconnected. Source screenshots were obtained,
 but subsequent screenshot capture failed even while DOM inspection, resizing,
-native navigation and the iframe check worked. Visual verification therefore
-uses those source canvas views and measured runtime composition, without a final
-runtime screenshot comparison or an assertion of exact pixel equivalence. Only
+native navigation and the iframe check worked. At that ticket's handoff, visual verification used those source canvas views and
+measured runtime composition without a final runtime screenshot comparison. The
+final ticket 07 pass recovered runtime screenshots of both desktop pairs and the
+stacked mobile cap/backpack, waited for image decoding, and compared them with
+the source canvas. Exact pixel equivalence is still not asserted. Only
 existing checks and browser/read-only shell verification were used; no tests or
 verifier coverage were added. Domain-root production output is restored before
 handoff. No deployment or CMS connection was made.
@@ -484,3 +486,98 @@ production gate returned HTTP 200 for the AI route and local artwork. Its 320px
 inspection confirmed no horizontal overflow, the complete principle and footer,
 the correct previous Paid destination, overview `/#work`, original email, and
 image dimensions/alt text. Domain-root output remains restored at handoff.
+
+## Ticket 07: navigation, recovery and static hosting
+
+All five complete pages were inspected together against the desktop/mobile Figma
+canvas and the retained reference inventory. The original 880px desktop content
+column, palette, local Space Grotesk/Inter typography, heading hierarchy, figure
+arrangements and crops remain. Home retains the single-column portrait, four
+previews and AFK collage; Brand retains the sevdesk/Shine sections and the
+three-part scope artwork; Merch retains square desktop pairs and stacked mobile
+figures; Paid retains the desktop campaign/creative panels, mobile 4:5 crops and
+three statistics; AI retains the wide desktop/portrait mobile artwork and its
+principle panel. Runtime screenshots were available for this final pass, including
+both correctly loaded Merch desktop pairs and stacked mobile cap/backpack. The
+older ticket 04 screenshot limitation is superseded by this evidence.
+
+The recovery page now uses the shared coral label, heading scale, muted prose,
+spacing and mobile gutters. Its original words are unchanged and are editable
+as validated `site.md` `notFound` fields; the Astro composition owns its layout.
+The recovery link has a 44px minimum height. Direct unknown nested addresses
+`/missing/nested/` and `/portfolio-check/missing/nested/` return HTTP 404 and the
+portfolio recovery document. Each loads local styling, fonts and the menu module;
+its absolute base-aware recovery/header links reach the correct front page even
+from a nested address. Recovery metadata uses its own description, `noindex`, and
+no canonical or Open Graph URL. The five public pages have English language,
+distinct titles/descriptions and canonicals matching the configured origin/base;
+no `noindex` is emitted for them. The default example origin must be replaced
+with the actual origin when publishing, as already described in README.
+
+The rendered main copy exactly matches the source inventory after whitespace
+normalization: Home 2,038 characters, Brand 3,817, Merch 1,954, Paid 1,497, AI
+1,797. The source header is excluded from each main comparison; home source lists
+its header last. Responsive hidden duplicates were excluded. No displayed copy,
+artwork or crop was invented. Original sources/provenance and font/icon license
+notices remain retained. All rendered images have descriptive alt text and
+explicit dimensions. All image and font resources are local, including the
+mobile backpack, source SVGs and original grain; there is no image viewer,
+password layer, CMS connection or remote media runtime.
+
+Browser measurements on all five pages plus 404 at 1280, 1024, 768, 701, 700, 375
+and 320px found no accidental horizontal overflow. Both original font families
+loaded. Images were decoded before judging their loaded appearance. The persistent
+header is 88px on desktop and 92px when enhanced on mobile. Native Brand anchors
+and home section destinations clear it; Work/AFK settle at approximately 116px
+and contact remains visible above the page end. Header links were activated from
+every direct detail route, the full fixed previous/next sequence and first/final
+overview destinations were activated, and home preview, in-page Brand cross-link,
+exploration, skip and top destinations were checked. Email anchors preserve
+`mailto:monaschmidt.design@gmail.com`; an external mail client was not launched.
+Browser back/forward restored the prior contact and Merch routes with their
+corresponding documents, independently of the fixed previous-page links.
+
+Keyboard Enter/Tab/Escape operated the menu and returned focus to its toggle;
+links had the visible 2px focus outline. Pointer activation and native DOM link
+activation verified destinations, menu closing and section access. Mobile menu
+controls and header links have 44px-high targets; other native links retain
+spaced, readable targets. Every page has one h1 and ordered subordinate headings.
+Reduced-motion support was verified in CSS: smooth scrolling is enabled only
+under `prefers-reduced-motion: no-preference`, and there are no animated menu
+transitions. The tools do not expose OS reduced-motion settings or true touch
+hardware emulation, so this is CSS/keyboard/pointer/target verification, not an
+actual reduced-motion OS or touchscreen-device trial.
+
+Actual JavaScript-disabled checks used same-origin iframes with
+`sandbox="allow-same-origin"` and without `allow-scripts`, for all five pages and
+a nested unknown address at both hosting shapes. Complete content/native links
+remained, all four header destinations were visible, the toggle stayed hidden,
+the menu enhancement did not initialize, and 320px layouts had no horizontal
+overflow. Native work/recovery links navigated successfully. The fallback header
+is 132px high; its anchors retain the extra header clearance.
+
+The existing full `yarn validate` pipeline and repository-prefix production
+`build` / `check:build` pass under pinned Node 24.22.3. The checker covers local
+assets (including CSS fonts), Markdown-body URLs, structured media, fragments,
+metadata and local enhancement modules; no tests or extended verifier coverage
+were added. Prefixed runtime inspection used port 4323, then that extra server
+was stopped and `dist/` was rebuilt for domain-root hosting. Source port 4322 was
+restarted after the new schema left its HMR content store stale; clearing the
+regenerable `.astro/data-store.json` was necessary because restarting alone reused
+the old validated record. All five source routes then returned HTTP 200 and both
+`/404.html` and a nested unknown address returned the styled HTTP 404 document.
+Root production port 4321 remains available. No deployment was performed; hosted GitHub Pages
+404 behavior is a post-deployment check when publication is separately authorized.
+
+README now documents the working Markdown/schema/media workflow, correct
+route-relative body URLs for both hosting shapes, validation and source-media
+preservation. Future Pages CMS configuration can map existing fields and lists
+without exposing Astro/CSS layout controls; it is not installed or required.
+The design specification and breakdown now state their completed implementation
+status while preserving the approved requirements.
+
+Visual comparison is manual canvas/runtime inspection, with no exported
+pixel-diff baseline or claim of exact pixel equivalence. The AFK collage remains
+limited to the available 1155px source. Browser host/pointer tools were
+intermittent; recovered screenshots and independent destination/DOM readings
+supplemented successful native pointer and keyboard operations.

@@ -35,6 +35,13 @@ const pages = defineCollection({
       overviewLabel: text,
       overviewLinkLabel: text,
       contactLinkLabel: text,
+      notFound: z.object({
+        title: text,
+        label: text,
+        heading: z.array(text).min(1),
+        description: text,
+        homeLabel: text,
+      }),
     }),
     z.object({
       kind: z.literal('home'),

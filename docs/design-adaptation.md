@@ -1,8 +1,11 @@
 # Mona portfolio: design adaptation
 
 Approved design interview decisions and implementation outline. The user
-confirmed shared understanding and requested conversion of this specification
-into tickets. Application implementation has not started.
+confirmed shared understanding and approved seven local implementation tickets.
+All seven are implemented and locally verified. This document preserves the
+approved requirements; [verification](design-verification.md) records the delivered
+behavior and limits, and [README](../README.md) describes the working edit/build
+workflow. No CMS connection or public deployment was performed.
 
 ## Agreed direction
 
@@ -29,7 +32,8 @@ into tickets. Application implementation has not started.
   and narrow desktop widths as well.
 - Core content and navigation must work without JavaScript. Small scripts are
   permitted for agreed enhancements. This replaces the scaffold's blanket ban
-  as a design requirement; the code and build checker have not yet been changed.
+  as a design requirement. The implementation and existing build checker now
+  permit the local menu enhancement while retaining native navigation.
 - Use an expandable mobile navigation menu with the existing navigation labels.
   Use Phosphor's List icon as a local raw SVG, with Regular weight as the initial
   implementation choice. Preserve its license notice.
@@ -50,12 +54,13 @@ into tickets. Application implementation has not started.
 - [Design file](https://www.figma.com/site/V4coeQ71FQamNLs5xwgJCS/Portfolio-Mona-%E2%80%93-Sites?node-id=0-1)
 - [Published reference](https://guitar-fence-23515820.figma.site/)
 
-## Observed facts
+## Reference and implementation facts
 
-- The repository is an Astro, TypeScript, plain CSS, and Markdown scaffold with
-  placeholder content and artwork. Its styling does not represent Mona's design.
-- The existing specification targets static hosting on GitHub Pages. A build
-  check currently prohibits all browser JavaScript, pending the agreed revision.
+- The repository uses Astro, TypeScript, plain CSS and validated Markdown. The
+  placeholder content/artwork has been replaced with the supplied portfolio.
+- Static output supports GitHub Pages at a domain root or repository prefix.
+  The existing build check allows local bundled enhancement modules and rejects
+  inline scripts, event handlers and client hydration.
 - The published homepage presents an introduction, four areas of selected work,
   an Away from keyboard section, and email contact.
 - The four work links lead to brand guidelines, merch and brand experience, paid
@@ -63,7 +68,8 @@ into tickets. Application implementation has not started.
   these are expertise areas, not individual project case studies.
 - Observed reference fonts are Space Grotesk Medium and Inter Regular. Observed
   text colors include coral #ff6668, near-black #111111, and gray #4b4b4b.
-  These are observations from the published site, pending design-file verification.
+  Desktop/mobile Figma inspection confirmed the palette and typography; the
+  original local font files and license notices are retained.
 - Both the published site and the Figma design file are now accessible in the
   shared browser. The design file visibly includes desktop and narrow layouts
   for the front page and all four expertise pages.
@@ -76,8 +82,9 @@ into tickets. Application implementation has not started.
 - Published source images and Inter/Space Grotesk font files are exposed by the
   reference site. Homepage image URLs were verified to load at useful source
   resolutions. The AFK collage is one PNG; individual photos are not exposed.
-  Separate images and live page text exist on the expertise pages. Full source
-  dimensions for every expertise image remain to be verified during migration.
+  Separate images and live page text exist on the expertise pages. Their source
+  dimensions and provenance are recorded with the retained original assets and
+  in the per-ticket verification. The AFK source remains limited to 1155px wide.
 - The Phosphor List Regular raw SVG and MIT license were read successfully from
   the official repository. No icon package or remote runtime is needed.
 
@@ -108,7 +115,7 @@ Replace the fictional project content and its routes with the real expertise
 content. Each expertise area has one canonical content record; the front page
 reads its preview fields rather than maintaining a second copy.
 
-Proposed content organization:
+Implemented content organization:
 
 ```text
 src/content/
@@ -235,5 +242,7 @@ Third round resolved:
 No interview decisions remain open. The user confirmed the implementation
 outline and requested a ticket breakdown.
 
-Resolved domain terms will be captured in GLOSSARY.md. Architectural decisions
-will receive ADRs only where a meaningful trade-off warrants a durable record.
+Resolved domain terms are captured in GLOSSARY.md. The two ADRs record editable
+content/page composition and core navigation without JavaScript. All five pages
+and the recovery page are complete; later CMS setup and deployment remain separate
+work. The completed ticket checklist and verification record preserve any limits.

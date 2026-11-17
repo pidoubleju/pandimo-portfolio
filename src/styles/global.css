@@ -213,15 +213,6 @@ a:hover {
   transform: translateY(0);
 }
 
-.not-found {
-  min-height: 70vh;
-  padding-block: var(--space-large);
-}
-
-.not-found h1 {
-  font-size: var(--text-page-title);
-}
-
 @media (max-width: 700px) {
   :root {
     --text-heading: 1.75rem;

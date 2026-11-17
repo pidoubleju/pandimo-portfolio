@@ -1,19 +1,45 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSite } from '../lib/content';
 import { withBase } from '../lib/paths';
+
+const { notFound } = await getSite();
 ---
 
-<BaseLayout title="Page not found" noindex>
-  <section class="not-found container">
-    <p class="eyebrow">404 / A small detour</p>
+<BaseLayout title={notFound.title} description={notFound.description} noindex>
+  <section class="not-found container copy-stack">
+    <p class="label">{notFound.label}</p>
     <h1>
-      Nothing here.
-      <br />
-      <span>Plenty to discover.</span>
+      {notFound.heading.map((line) => (
+        <span class="heading-line">{line}</span>
+      ))}
     </h1>
-    <p>This page may have moved, or the address may have a typo.</p>
-    <a class="button" href={withBase()}>
-      Back to home <span aria-hidden="true">↗</span>
+    <p class="muted">{notFound.description}</p>
+    <a class="text-link recovery-link" href={withBase()}>
+      {notFound.homeLabel}
     </a>
   </section>
 </BaseLayout>
+
+<style>
+  .not-found {
+    min-height: 70vh;
+    padding-block: var(--space-large);
+  }
+
+  h1 {
+    font-size: var(--text-page-title);
+  }
+
+  .recovery-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--touch-target);
+  }
+
+  @media (max-width: 700px) {
+    .not-found {
+      padding-block: var(--space-mobile-intro) var(--space-section);
+    }
+  }
+</style>

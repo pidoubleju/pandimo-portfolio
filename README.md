@@ -20,7 +20,7 @@ serves the production build. The default canonical origin is `https://example.co
 
 ## Edit content
 
-- `src/content/pages/site.md`: shared identity, navigation labels and contact.
+- `src/content/pages/site.md`: shared identity, navigation labels, contact and 404 recovery copy.
 - `src/content/pages/home.md`: introduction, selected-work heading, AFK artwork
   and prose, contact section. The Markdown body holds the AFK prose.
 - `src/content/expertise/*.md`: one canonical record per expertise area. Its
@@ -41,10 +41,36 @@ own composition; shared components own repeated previews, introductions,
 metadata, and fixed-sequence navigation. The fields are compatible with future
 Pages CMS nested objects/lists and Markdown editing. No CMS is connected or needed.
 
-Use relative URLs for links/media inside Markdown bodies, such as
-`../../images/your-image.webp`, so they resolve under both hosting path shapes.
+Markdown-body URLs resolve from the rendered page URL, not the content file's
+location. On the front page use `./images/your-image.webp`; on an expertise page
+use `../images/your-image.webp`. For an expertise-to-expertise link use
+`../paid-and-organic-content/` (as in the Brand record). Same-page links use
+`#section-id`. Avoid root-absolute body URLs such as `/images/...`, which bypass
+the repository prefix; `withBase` applies to structured fields, not Markdown.
+Run both root and prefix checks after editing body links or media paths.
+
 Do not change expertise filenames or routes without updating the fixed sequence
-in `src/lib/content.ts`. Identity/navigation copy should be changed in `site.md`.
+in `src/lib/content.ts` and the corresponding Astro page. Identity/navigation and
+404 copy should be changed in `site.md`. Keep source artwork and provenance in
+`.scratch/design-adaptation/source-assets/`; create a delivery variant without
+upscaling, preserve its crop in the composition, and update dimensions and alt text
+alongside its path. Preserve the applicable notices in `public/licenses/`.
+
+A typical edit is: change the existing field or Markdown prose, run
+`yarn typecheck`, inspect `yarn dev` at desktop and mobile widths, then run
+`yarn validate` and the prefix checks below. If a schema edit leaves the running
+dev server with old content fields, stop it, remove the generated
+`.astro/data-store.json` cache and restart it before inspection. Restarting alone
+may reuse the stale validated record. Commit the Markdown and any delivery media together after the checks pass.
+
+Future Pages CMS setup can map these existing files, nested objects, lists and
+media fields in a `.pages.yml` configuration. It must retain the existing field
+names, required groups, fixed routes and image metadata, and use the URL rules
+above for Markdown bodies. Structured image fields retain `/images/...` values
+for the templates to prefix. Text/media editing needs no layout selector or
+editable Astro/HTML. That future configuration, account connection and editor
+workflow are not installed in this version; repository editing is the working
+workflow today.
 
 ## Checks
 
@@ -98,7 +124,11 @@ The supplied `.github/workflows/pages.yml` validates root and repository-prefix
 builds. After repository setup, select GitHub Actions in **Settings → Pages →
 Build and deployment**. The deployment job derives the origin/base path with
 `actions/configure-pages` and publishes `dist/` on pushes to `main` or a manual run.
-Pull requests validate without deploying. Configure any repository/environment
+Pull requests validate without deploying. A static unknown URL uses the shared
+`404.html`, whose absolute base-aware links recover from nested paths; it is
+`noindex` and has no canonical or Open Graph URL. The local preview verifies this
+behavior; hosted GitHub Pages behavior remains to be checked when deployment is
+separately authorized. Configure any repository/environment
 protections in GitHub. Custom domains are configured in Pages settings; this
 repository has no CNAME.
 
