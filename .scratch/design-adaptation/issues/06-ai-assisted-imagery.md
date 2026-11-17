@@ -13,7 +13,7 @@ Reuse coherent visual patterns without introducing a universal page builder.
 
 **Blocked by:** 01 — Browse the real front page and expertise introductions.
 
-**Status:** implemented; code review in progress
+**Status:** complete — implemented, verified and reviewed
 
 - [x] Migrate the complete existing body, including the illustration and caption,
       point of view, four approach rows, principle callout and footer copy without
