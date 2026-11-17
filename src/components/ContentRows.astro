@@ -2,12 +2,13 @@
 interface Props {
   items: { heading: string; description: string; number?: string }[];
   numbered?: boolean;
+  stacked?: boolean;
 }
 
-const { items, numbered = false } = Astro.props;
+const { items, numbered = false, stacked = false } = Astro.props;
 ---
 
-<div class:list={['content-rows', { numbered }]}>
+<div class:list={['content-rows', { numbered, stacked }]}>
   {items.map((item) => (
     <div class="content-row">
       {numbered && <p class="row-number heading">{item.number}</p>}
@@ -30,6 +31,12 @@ const { items, numbered = false } = Astro.props;
     grid-template-columns: 3.5rem minmax(0, 1fr);
     column-gap: var(--space-layout);
     row-gap: var(--space-tight);
+    padding-block: var(--space-layout);
+  }
+
+  .stacked .content-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-tight);
     padding-block: var(--space-layout);
   }
 

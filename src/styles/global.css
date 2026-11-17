@@ -47,6 +47,7 @@
 :root {
   color-scheme: light;
   --paper: #f7f5f2;
+  --surface: #ffffff;
   --ink: #111111;
   --muted: #4b4b4b;
   --accent: #ff6668;
@@ -69,6 +70,7 @@
   --text-navigation-min: 1.75rem;
   --text-heading: 2rem;
   --text-page-title: 3.25rem;
+  --text-statistic: 2.8125rem;
   --leading-body: 1.5;
   --leading-heading: 1.2;
   --leading-page-title: 1.14;

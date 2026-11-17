@@ -86,6 +86,21 @@ const merchBrandExperience = z.object({
     description: text,
   }),
 });
+const paidOrganicContent = z.object({
+  campaign: z.object({ image, caption: text }),
+  challenge: proseItem.extend({ label: text }),
+  examples: z.object({
+    illustration: image,
+    advertisement: image,
+    caption: text,
+  }),
+  contribution: z.object({ label: text, items: z.array(proseItem).length(3) }),
+  scope: z.object({
+    label: text,
+    statistics: z.array(z.object({ value: text, description: text })).length(3),
+    note: text,
+  }),
+});
 const brandGuidelines = z.object({
   exploration: z.object({
     sevdesk: z.object({ heading: text, description: text, linkLabel: text }),
@@ -149,6 +164,7 @@ const expertise = defineCollection({
     ),
     brandGuidelines: brandGuidelines.optional(),
     merchBrandExperience: merchBrandExperience.optional(),
+    paidOrganicContent: paidOrganicContent.optional(),
     nextLabel: text.optional(),
     nextLinkLabel: text.optional(),
   }),

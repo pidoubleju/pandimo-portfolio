@@ -1,8 +1,218 @@
 ---
+import ContentRows from '../components/ContentRows.astro';
 import ExpertiseLayout from '../layouts/ExpertiseLayout.astro';
 import { getExpertise } from '../lib/content';
+import { withBase } from '../lib/paths';
 
 const area = await getExpertise('paid-and-organic-content');
+const content = area.data.paidOrganicContent;
+if (!content) throw new Error('Paid & organic content body content is missing');
+const { campaign, challenge, examples, contribution, scope } = content;
 ---
 
-<ExpertiseLayout area={area} />
+<ExpertiseLayout area={area}>
+  <figure class="campaign">
+    <div class="campaign-panel">
+      <img
+        src={withBase(campaign.image.src)}
+        width={campaign.image.width}
+        height={campaign.image.height}
+        alt={campaign.image.alt}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <figcaption class="muted">{campaign.caption}</figcaption>
+  </figure>
+
+  <section class="challenge" aria-labelledby="challenge-heading">
+    <div class="copy-stack">
+      <p class="label">{challenge.label}</p>
+      <h2 id="challenge-heading">{challenge.heading}</h2>
+      <p class="challenge-description">{challenge.description}</p>
+    </div>
+    <figure class="examples">
+      <div class="examples-panel">
+        <img
+          src={withBase(examples.illustration.src)}
+          width={examples.illustration.width}
+          height={examples.illustration.height}
+          alt={examples.illustration.alt}
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          class="advertisement"
+          src={withBase(examples.advertisement.src)}
+          width={examples.advertisement.width}
+          height={examples.advertisement.height}
+          alt={examples.advertisement.alt}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <figcaption class="muted">{examples.caption}</figcaption>
+    </figure>
+  </section>
+
+  <section class="contribution" aria-labelledby="contribution-heading">
+    <h2 class="label" id="contribution-heading">
+      {contribution.label}
+    </h2>
+    <ContentRows items={contribution.items} stacked />
+  </section>
+
+  <section class="scope" aria-labelledby="scope-heading">
+    <h2 class="label" id="scope-heading">
+      {scope.label}
+    </h2>
+    <dl class="statistics">
+      {scope.statistics.map((statistic) => (
+        <div>
+          <dt class="heading">{statistic.value}</dt>
+          <dd>{statistic.description}</dd>
+        </div>
+      ))}
+    </dl>
+    <p class="scope-note muted">{scope.note}</p>
+  </section>
+</ExpertiseLayout>
+
+<style>
+  .campaign {
+    margin-top: var(--space-medium);
+  }
+
+  .campaign-panel,
+  .examples-panel {
+    background: var(--surface);
+    border-radius: var(--radius);
+  }
+
+  .campaign-panel {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 880 / 640;
+  }
+
+  .campaign-panel img {
+    width: 46.82%;
+  }
+
+  figcaption,
+  .scope-note {
+    font: 400 var(--text-ui) / var(--leading-heading) var(--font-heading);
+  }
+
+  figcaption {
+    margin-top: var(--space-layout);
+  }
+
+  .challenge {
+    margin-top: var(--space-section);
+  }
+
+  .challenge h2 {
+    font-size: var(--text-section-heading);
+  }
+
+  .challenge-description {
+    font-size: var(--text-subheading);
+  }
+
+  .examples {
+    margin-top: var(--space-layout);
+  }
+
+  .examples-panel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4%;
+    aspect-ratio: 880 / 640;
+  }
+
+  .examples-panel img {
+    width: 33.07%;
+  }
+
+  .examples-panel img:first-child {
+    margin-left: 12.727%;
+  }
+
+  .contribution {
+    margin-top: var(--space-layout);
+  }
+
+  .contribution h2 {
+    margin-bottom: var(--space-layout);
+  }
+
+  .scope {
+    margin-top: var(--space-section);
+    padding: var(--space-medium);
+    background: var(--callout);
+  }
+
+  .statistics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-medium);
+    margin-block: var(--space-layout);
+  }
+
+  .statistics dt {
+    font-size: var(--text-statistic);
+  }
+
+  .statistics dd {
+    margin-top: var(--space-tight);
+  }
+
+  @media (max-width: 700px) {
+    .campaign-panel,
+    .examples-panel {
+      display: block;
+      aspect-ratio: 4 / 5;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .campaign-panel img,
+    .examples-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .examples-panel img:first-child {
+      margin-left: 0;
+    }
+
+    .examples-panel .advertisement {
+      display: none;
+    }
+
+    .challenge h2 {
+      font-size: var(--text-section-heading-mobile);
+    }
+
+    .statistics dt {
+      font-size: var(--text-subheading);
+    }
+
+    .statistics dd {
+      font-size: var(--text-small);
+      overflow-wrap: anywhere;
+    }
+  }
+  @media (max-width: 380px) {
+    .scope {
+      padding: var(--space-small);
+    }
+
+    .statistics {
+      gap: var(--space-small);
+    }
+  }
+</style>

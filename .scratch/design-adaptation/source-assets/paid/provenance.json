@@ -1,0 +1,41 @@
+{
+  "note": "Original supplied portfolio artwork. No separate artwork license notice was exposed by the source. Original files are retained unchanged. WebP delivery uses quality 95 at full source resolution without upscaling.",
+  "assets": [
+    {
+      "file": "alles-klar.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/9e9dd73b8b32169ed060726a7999970e600f106f.png",
+      "dimensions": [824, 1029],
+      "sha256": "13efc5bf1f61f0c6813e9278913db29badea02eaa2d5b8a0149e7226512afdf2",
+      "format": "png",
+      "delivery": {
+        "file": "alles-klar.webp",
+        "width": 824,
+        "height": 1029
+      }
+    },
+    {
+      "file": "native-illustration.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/dc340d8a9604e649e20a45c50cf66af84e5f15d4.png",
+      "dimensions": [1080, 1920],
+      "sha256": "ae0dd63542c68b30ed8f595076643d59733e4ae48f3d16760b51e361d0fbfb0b",
+      "format": "png",
+      "delivery": {
+        "file": "native-illustration.webp",
+        "width": 1080,
+        "height": 1920
+      }
+    },
+    {
+      "file": "paid-ad.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/8884d0c0385584aaf9e63aa3b023900df5956f41.png",
+      "dimensions": [1080, 1920],
+      "sha256": "58b7cb9b2a6663d61c467c336158004782b99297087764720a5f679ec9ceee36",
+      "format": "png",
+      "delivery": {
+        "file": "paid-ad.webp",
+        "width": 1080,
+        "height": 1920
+      }
+    }
+  ]
+}

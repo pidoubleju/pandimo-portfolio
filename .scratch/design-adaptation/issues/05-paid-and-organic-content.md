@@ -13,31 +13,31 @@ Reuse coherent visual patterns without introducing a universal page builder.
 
 **Blocked by:** 01 — Browse the real front page and expertise introductions.
 
-**Status:** ready-for-agent
+**Status:** complete
 
-- [ ] Migrate all existing prose, headings, metadata, captions, contribution rows,
+- [x] Migrate all existing prose, headings, metadata, captions, contribution rows,
       statistics, notes and navigation labels word for word.
-- [ ] Preserve the campaign presentation panels, portrait creative arrangement,
+- [x] Preserve the campaign presentation panels, portrait creative arrangement,
       divided contribution rows and three-stat callout across reference layouts.
-- [ ] Content and associated media are editable through validated Markdown
+- [x] Content and associated media are editable through validated Markdown
       records and structured fields; layout remains in the page composition and
       recurring patterns use shared components.
-- [ ] Recover the distinct original creative images rather than flattening page
+- [x] Recover the distinct original creative images rather than flattening page
       text into artwork. Keep assets local with dimensions, appropriate alt text,
       and the original visual quality and crop.
-- [ ] Previous navigation opens Merch & brand experience and next navigation opens
+- [x] Previous navigation opens Merch & brand experience and next navigation opens
       AI-assisted imagery. Other links work from a direct page visit without
       JavaScript.
-- [ ] Verify exact copy, responsive layouts, root and prefixed links/media, and
+- [x] Verify exact copy, responsive layouts, root and prefixed links/media, and
       passing repository checks.
 
-- [ ] The delivered surface matches the original palette, typography, spacing,
+- [x] The delivered surface matches the original palette, typography, spacing,
       artwork, and intended desktop/mobile composition, and remains usable at
       intermediate widths and 320px without accidental horizontal overflow.
-- [ ] Core content and navigation work without JavaScript. Any agreed enhancement
+- [x] Core content and navigation work without JavaScript. Any agreed enhancement
       preserves keyboard access and visible focus; images remain inline.
-- [ ] Content and local assets resolve under both domain-root and repository-prefix
+- [x] Content and local assets resolve under both domain-root and repository-prefix
       hosting. Existing source and production-build checks pass, with meaningful
       verification of the behavior delivered by this ticket.
-- [ ] No CMS connection or public deployment is required by this ticket. Retain
+- [x] No CMS connection or public deployment is required by this ticket. Retain
       applicable asset licenses and do not substitute invented copy or artwork.

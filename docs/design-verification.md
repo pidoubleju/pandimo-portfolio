@@ -316,3 +316,58 @@ Review totals: Standards 0 findings; Spec 0 findings. The root agent's final
 production gate returned HTTP 200 for the Merch route, stylesheet, menu module
 and all five media variants. Browser DOM inspection at 320px confirmed four
 rendered images, the correct previous/next URLs and no horizontal overflow.
+
+## Ticket 05: complete Paid & organic content
+
+The Paid desktop and mobile Figma frames were visually inspected on the signed-in
+canvas at 50% zoom. Desktop uses the 880px content column, a white 880 × 640
+campaign panel with the original 412px portrait, and a second white panel with
+two approximately 291 × 518px creatives. Mobile uses 4:5 campaign and illustration
+crops; the paid advertisement is deliberately absent from the original mobile
+composition. Divided contribution rows stack their heading and prose at both
+sizes. The beige outcome panel retains three statistics in one row, with compact
+mobile typography. At widths below 381px its padding and gaps reduce so labels
+such as “templates” remain whole while preserving the three-column arrangement.
+
+All original headings, prose, campaign/example captions, contribution rows,
+statistics and the market note are in named, validated `paidOrganicContent`
+fields in the canonical Markdown record. The distinct Astro composition owns
+media arrangement and responsive behavior. `ContentRows` now also handles the
+observed stacked-row pattern through a composition-only property; editors receive
+no layout switches. The rendered production main text exactly matches the source
+inventory after whitespace normalization (1,497 characters on both sides).
+
+All three original images are retained unchanged in
+`.scratch/design-adaptation/source-assets/paid/`, with source URLs, dimensions,
+formats and SHA-256 hashes in `provenance.json`: the alles klar campaign is
+824 × 1029, and the native illustration and paid ad are each 1080 × 1920. Local
+WebP delivery keeps those full dimensions at quality 95 without upscaling. Every
+rendered image has explicit dimensions and descriptive alt text and loads lazily.
+No separate artwork license notice was exposed by the supplied portfolio source;
+no copy or artwork was invented, and existing font/icon notices remain retained.
+
+Existing source checks and `yarn validate` pass, as do the `/portfolio-check/`
+production build and existing `check:build`. Source and production browser
+inspection covered 1280px, 768px, 390px and 320px without horizontal overflow.
+Runtime screenshots were compared with the inspected canvas arrangements,
+including the desktop creative panel, mobile illustration crop, contribution
+rows and compact statistics. All three prefixed media URLs returned HTTP 200;
+the local menu module and both original font families loaded. Native previous
+navigation reached Merch & brand experience, next reached AI-assisted imagery,
+back-to-top returned to scroll position zero, and header Contact reached the
+prefixed front-page contact fragment from direct entry.
+
+An actual same-origin sandbox iframe without `allow-scripts` verified the
+prefixed page at 320px: the complete contribution and statistics content remained,
+all four header links were visible, the menu toggle stayed hidden, no horizontal
+overflow occurred, and native previous navigation opened Merch & brand experience.
+Shared visible-focus styling and native anchor semantics are retained. Browser
+click automation briefly failed, so native anchor activation was also inspected
+through DOM `click()` followed by destination verification; the header Contact
+link was checked with the browser's pointer click tool.
+
+Only existing checks and browser/read-only shell verification were used, as
+requested; no tests or verifier coverage were added. Canvas and runtime views
+were visually inspected without an exported pixel-diff baseline, so exact pixel
+equivalence is not asserted. Domain-root production output is restored before
+handoff. No deployment or CMS connection was made.
