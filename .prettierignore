@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.astro/
+.yarn/
+.idea/
+yarn.lock
+# Keep the supplied specification unchanged.
+spec.md

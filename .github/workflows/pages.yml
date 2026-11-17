@@ -1,0 +1,79 @@
+name: Validate and deploy
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate (${{ matrix.base }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        base: ['/', '/portfolio-check/']
+    env:
+      SITE_URL: https://example.com
+      BASE_PATH: ${{ matrix.base }}
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+      - name: Enable pinned Yarn
+        run: corepack enable
+      - run: yarn install --immutable
+      - run: yarn validate
+
+  build-pages:
+    name: Build Pages artifact
+    needs: validate
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+      - name: Enable pinned Yarn
+        run: corepack enable
+      - run: yarn install --immutable
+      - name: Read Pages URL
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build and verify deployment
+        run: yarn build && yarn check:build
+        env:
+          SITE_URL: ${{ steps.pages.outputs.origin }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build-pages
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

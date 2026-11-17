@@ -1,0 +1,48 @@
+{
+  "name": "mona-portfolio",
+  "private": true,
+  "type": "module",
+  "packageManager": "yarn@4.18.1",
+  "engines": {
+    "node": "24.22.3"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "typecheck": "astro check && tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:unused": "knip",
+    "check:dependencies": "depcruise src scripts astro.config.ts eslint.config.ts --output-type err",
+    "check:code": "yarn typecheck && yarn lint && yarn check:unused && yarn check:dependencies",
+    "check": "yarn check:code && yarn format:check",
+    "check:build": "node scripts/check-build.ts",
+    "validate": "yarn check && yarn build && yarn check:build"
+  },
+  "dependencies": {
+    "astro": "7.4.12"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "dependency-cruiser": "18.7.2",
+    "eslint": "10.15.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-astro": "3.2.1",
+    "eslint-plugin-jsx-a11y-x": "0.2.0",
+    "eslint-plugin-regexp": "3.3.3",
+    "eslint-plugin-simple-import-sort": "14.0.0",
+    "eslint-plugin-unused-imports": "4.4.1",
+    "jiti": "2.6.1",
+    "knip": "6.45.1",
+    "parse5": "8.1.1",
+    "prettier": "3.10.1",
+    "prettier-plugin-astro": "1.1.2",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.73.0"
+  }
+}

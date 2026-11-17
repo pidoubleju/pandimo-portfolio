@@ -1,0 +1,110 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+import { site } from '../data/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getProjects } from '../lib/projects';
+
+const projects = await getProjects();
+---
+
+<BaseLayout>
+  <section class="hero container" aria-labelledby="intro-heading">
+    <div class="hero-topline">
+      <p class="eyebrow">Independent portfolio</p>
+      <p class="hero-note">
+        A little curiosity.
+        <br />A lot of intention.
+      </p>
+    </div>
+    <h1 id="intro-heading">
+      Thoughtful design.
+      <br />
+      <span>Made for people.</span>
+    </h1>
+    <div class="hero-bottom">
+      <p>
+        Hi, I’m {site.name}. I turn ideas into clear identities
+        <br class="desktop-break" /> and considered digital experiences.
+      </p>
+      <a class="round-link" href="#work" aria-label="Explore selected work">
+        ↓
+      </a>
+    </div>
+  </section>
+
+  <section
+    class="work-section container"
+    id="work"
+    aria-labelledby="work-heading"
+  >
+    <div class="section-heading">
+      <h2 id="work-heading">
+        Selected work
+        <span class="count">({String(projects.length).padStart(2, '0')})</span>
+      </h2>
+      <p>A few ideas, brought to life.</p>
+    </div>
+    <div class="project-grid">
+      {projects.map((project, index) => (
+        <ProjectCard project={project} index={index} />
+      ))}
+    </div>
+  </section>
+
+  <section
+    class="about-section container"
+    id="about"
+    aria-labelledby="about-heading"
+  >
+    <p class="eyebrow">A little about me</p>
+    <div>
+      <h2 id="about-heading">
+        Curious by nature.
+        <br />
+        <span>Considered by design.</span>
+      </h2>
+      <p>
+        I’m {site.name}, a designer who enjoys asking questions, finding the
+        simple thread in a complex idea, and making things that feel good to
+        use.
+      </p>
+      <p>
+        This is a starting collection of sample projects. Real stories, new
+        collaborations, and a little more personality will follow.
+      </p>
+      <div class="expertise" aria-label="Areas of interest">
+        <span>Visual identity</span>
+        <span>Digital design</span>
+        <span>Art direction</span>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="contact-section"
+    id="contact"
+    aria-labelledby="contact-heading"
+  >
+    <div class="container contact-inner">
+      <p class="eyebrow">Have something in mind?</p>
+      <h2 id="contact-heading">
+        Good things start
+        <br />
+        with a conversation<span aria-hidden="true">.</span>
+      </h2>
+      <a class="button" href={`mailto:${site.email}`}>
+        Say hello <span aria-hidden="true">↗</span>
+      </a>
+      <div class="contact-bottom">
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+        <nav aria-label="Social links">
+          {site.socials.map((social) => (
+            <a href={social.url}>
+              {social.label} <span aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </nav>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
