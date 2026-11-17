@@ -13,7 +13,7 @@ Reuse coherent visual patterns without introducing a universal page builder.
 
 **Blocked by:** 01 — Browse the real front page and expertise introductions.
 
-**Status:** ready-for-agent
+**Status:** implemented; review and final runtime gate pending
 
 - [ ] The mobile menu uses a locally stored Phosphor List SVG and retains its
       license notice. Desktop navigation preserves the reference presentation.

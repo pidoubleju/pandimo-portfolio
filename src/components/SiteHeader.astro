@@ -1,4 +1,5 @@
 ---
+import ListIcon from '../assets/icons/list.svg';
 import type { getSite } from '../lib/content';
 import { withBase } from '../lib/paths';
 
@@ -13,12 +14,115 @@ const { site } = Astro.props;
   <a class="wordmark" href={withBase('#top')}>
     {site.name}
   </a>
-  <nav aria-label="Main navigation">
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Main navigation"
+    aria-expanded="false"
+    aria-controls="site-navigation"
+    hidden
+  >
+    <ListIcon width="24" height="24" aria-hidden="true" focusable="false" />
+  </button>
+  <nav id="site-navigation" aria-label="Main navigation">
     {site.navigation.map((link) => (
       <a href={withBase(`#${link.section}`)}>{link.label}</a>
     ))}
   </nav>
 </header>
+
+<script>
+  const header = document.querySelector<HTMLElement>('.site-header');
+  const toggle = header?.querySelector<HTMLButtonElement>('.menu-toggle');
+  const navigation = header?.querySelector<HTMLElement>('#site-navigation');
+
+  if (header && toggle && navigation) {
+    const mobile = window.matchMedia('(max-width: 700px)');
+    const updateOffset = () => {
+      document.documentElement.style.setProperty(
+        '--header-offset',
+        `${header.getBoundingClientRect().height}px`
+      );
+    };
+    const setExpanded = (expanded: boolean) => {
+      toggle.setAttribute('aria-expanded', String(expanded));
+      navigation.hidden = mobile.matches && !expanded;
+      updateOffset();
+    };
+
+    toggle.addEventListener('click', () => {
+      setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    header.addEventListener('keydown', (event) => {
+      if (
+        event.key === 'Escape' &&
+        toggle.getAttribute('aria-expanded') === 'true'
+      ) {
+        setExpanded(false);
+        toggle.focus({ preventScroll: true });
+      }
+    });
+    header.addEventListener('click', (event) => {
+      const link =
+        event.target instanceof Element
+          ? event.target.closest<HTMLAnchorElement>('a')
+          : null;
+      if (
+        !link ||
+        !mobile.matches ||
+        event.defaultPrevented ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        event.button !== 0
+      )
+        return;
+
+      setExpanded(false);
+      const destination = new URL(link.href);
+      if (
+        destination.origin === location.origin &&
+        destination.pathname === location.pathname
+      ) {
+        const section = document.getElementById(
+          decodeURIComponent(destination.hash.slice(1))
+        );
+        if (section) {
+          section.setAttribute('tabindex', '-1');
+          // Let the native fragment navigation finish before moving focus.
+          requestAnimationFrame(() => {
+            section.focus({ preventScroll: true });
+            section.addEventListener(
+              'blur',
+              () => section.removeAttribute('tabindex'),
+              { once: true }
+            );
+          });
+        }
+      }
+    });
+    mobile.addEventListener('change', () => {
+      const focusToggle =
+        mobile.matches && navigation.contains(document.activeElement);
+      const focusNavigation =
+        !mobile.matches && document.activeElement === toggle;
+      setExpanded(false);
+      if (focusToggle) {
+        toggle.focus({ preventScroll: true });
+      } else if (focusNavigation) {
+        navigation
+          .querySelector<HTMLAnchorElement>('a')
+          ?.focus({ preventScroll: true });
+      }
+    });
+    const observer = new ResizeObserver(updateOffset);
+    observer.observe(header);
+    header.dataset['menuReady'] = '';
+    toggle.hidden = false;
+    setExpanded(false);
+  }
+</script>
 
 <style>
   .site-header {
@@ -55,21 +159,51 @@ const { site } = Astro.props;
     font-size: var(--text-ui);
   }
 
+  .menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--touch-target);
+    height: var(--touch-target);
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
+    color: var(--ink);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  nav[hidden] {
+    display: none;
+  }
+
   @media (max-width: 700px) {
     .site-header {
-      align-items: flex-start;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
       gap: var(--space-small);
       padding: var(--space-layout) var(--gutter);
     }
 
+    .site-header[data-menu-ready] {
+      min-height: 0;
+    }
+
+    .menu-toggle:not([hidden]) {
+      display: inline-flex;
+    }
+
     nav {
+      grid-column: 1 / -1;
       gap: 0.5rem var(--space-inline);
       font-size: var(--text-label);
     }
 
     nav a {
-      padding-block: 0.3rem;
+      display: inline-flex;
+      align-items: center;
+      min-height: var(--touch-target);
     }
   }
 </style>

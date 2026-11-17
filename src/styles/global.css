@@ -83,6 +83,7 @@
   --content-width: 55rem;
   --gutter: clamp(1.5rem, 11.28vw, 2.75rem);
   --header-height: 5.5rem;
+  --touch-target: 2.75rem;
   --radius: 0.25rem;
   font-family: var(--font-body);
   color: var(--ink);
@@ -160,7 +161,7 @@ a:hover {
 }
 
 [id] {
-  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+  scroll-margin-top: calc(var(--header-offset, var(--header-height)) + 1.5rem);
 }
 
 .container {
@@ -218,7 +219,7 @@ a:hover {
   :root {
     --text-heading: 1.75rem;
     --text-page-title: 2.25rem;
-    --header-height: 8rem;
+    --header-height: 8.25rem;
   }
 }
 

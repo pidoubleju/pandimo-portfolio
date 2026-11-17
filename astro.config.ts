@@ -8,4 +8,6 @@ export default defineConfig({
   outDir: './dist',
   trailingSlash: 'always',
   devToolbar: { enabled: false },
+  // Keep the shared menu module cacheable and compatible with the script policy.
+  vite: { build: { assetsInlineLimit: 0 } },
 });

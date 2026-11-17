@@ -29,10 +29,6 @@ const origin = new URL(process.env['SITE_URL'] ?? 'https://example.com').origin;
 const files = await readdir(output, { recursive: true });
 assert(files.includes('index.html'), 'Homepage is missing');
 assert(files.includes('404.html'), 'Static 404 page is missing');
-assert(
-  !files.some((file) => /\.[cm]?js$/.test(file)),
-  'Build emitted JavaScript'
-);
 
 const pages = new Map<string, { url: URL; nodes: Element[] }>();
 for (const file of files.filter((file) => file.endsWith('.html'))) {
@@ -85,10 +81,15 @@ for (const [file, { url, nodes }] of pages) {
   }
 
   for (const node of nodes) {
-    assert(
-      node.tagName !== 'script' && node.tagName !== 'astro-island',
-      `${file}: browser JavaScript found`
-    );
+    assert(node.tagName !== 'astro-island', `${file}: client hydration found`);
+    if (node.tagName === 'script') {
+      assert(
+        attribute(node, 'type') === 'module' &&
+          attribute(node, 'src')?.startsWith(`${base}_astro/`) &&
+          node.childNodes.length === 0,
+        `${file}: only local bundled enhancement modules are permitted`
+      );
+    }
     assert(
       !node.attrs.some((attr) => /^on/i.test(attr.name)),
       `${file}: inline event handler found`
@@ -146,5 +147,5 @@ assert(
   '404 must not be indexed'
 );
 console.log(
-  `Verified ${String(pages.size)} static pages at ${origin}${base}: local links, assets, fragments, metadata, and no browser JavaScript.`
+  `Verified ${String(pages.size)} static pages at ${origin}${base}: local links, assets, fragments, metadata, and local enhancement scripts.`
 );

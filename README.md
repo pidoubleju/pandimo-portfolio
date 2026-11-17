@@ -56,8 +56,10 @@ yarn lint:fix  # fix eligible lint issues
 The existing pipeline includes Astro/TypeScript diagnostics, type-aware ESLint,
 accessibility linting, Prettier, Knip, and Dependency Cruiser. The production
 checker validates local links, assets and fragments; language, image descriptions,
-page titles, descriptions, canonicals and 404 indexing. It currently prohibits
-browser JavaScript; ticket 02 revises only that policy for the agreed mobile menu.
+page titles, descriptions, canonicals and 404 indexing. It permits local bundled
+enhancement modules for the mobile menu, while rejecting client hydration,
+inline scripts and inline event handlers. Navigation remains available if the
+menu script fails or JavaScript is disabled.
 
 The user requested existing checks and browser verification only. Responsive,
 copy and navigation verification supplement these checks without introducing a
@@ -82,6 +84,7 @@ source copy, media URLs, verification, and any limits. Original home bitmaps are
 retained in `.scratch/design-adaptation/source-assets/home/`; WebP delivery
 variants and the original SVG live in `public/images/home/`. Inter and Space
 Grotesk font files are local, with OFL notices in `public/licenses/`.
+The local Phosphor List icon retains its MIT notice in the same directory.
 
 No copy or artwork has been generated to replace the source. The AFK collage
 remains a single image. The site remains public, without a password or image viewer.

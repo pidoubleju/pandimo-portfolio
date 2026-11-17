@@ -78,3 +78,51 @@ reference. Full bodies and the expandable menu remain correctly deferred.
 
 Review totals: Standards 1 low finding resolved, 1 optional heuristic retained;
 Spec 0 findings. Existing source/production checks pass after the token change.
+
+## Ticket 02: expandable mobile navigation
+
+The shared header progressively enhances its ordinary navigation links with a
+Phosphor List Regular toggle below 701px. The original desktop header layout and
+copy are retained. The SVG is stored in `src/assets/icons/list.svg`, imported as
+an Astro SVG component, and carries its upstream MIT notice in
+`public/licenses/Phosphor-MIT.txt`. Source:
+[Phosphor List Regular](https://github.com/phosphor-icons/core/blob/main/assets/regular/list.svg).
+
+The toggle remains hidden and navigation visible in the server output. Only
+successful script initialization enables collapsing. At 320px the enhanced
+closed header is 92px high and expands to 152px in document flow; the icon button
+is 44 × 44px and navigation links have 44px height. A ResizeObserver maintains
+the real sticky-header scroll offset independently of its minimum height.
+
+Browser verification covered 320px, 390px, 768px and 1280px widths without
+horizontal overflow; pointer activation; Enter/Space, Tab and Escape; visible
+focus; focus returning to the toggle on Escape; section focus after same-page
+selection; and focus recovery when resizing across the breakpoint. Selecting
+Work closes the menu and positions the section below the header. Direct Brand
+guidelines entry followed by Contact reaches the front-page contact section.
+The desktop navigation remains visible and the toggle hidden.
+
+An actual script-disabled, same-origin sandbox iframe (`allow-same-origin`
+without `allow-scripts`) retained all four visible navigation links and hid the
+toggle. Its AFK link navigated with a native fragment and its 320px layout did
+not overflow. This checks the fallback without pretending that removing an
+already-executed script disables its effects.
+
+The menu has no animation or transition. The existing smooth-scroll rule remains
+inside `prefers-reduced-motion: no-preference`. Its CSS guard was inspected;
+the preview tools do not expose operating-system reduced-motion emulation or a
+physical touchscreen, so those hardware/settings combinations were not tested.
+Pointer interaction and target dimensions were checked in the browser.
+
+The production verifier's blanket JavaScript prohibition was replaced only with
+permission for local bundled enhancement modules. Inline scripts, inline event
+handlers and client hydration remain rejected; metadata, language, local URL,
+image-description, fragment, canonical and 404 checks remain intact. Astro's
+asset inlining is disabled so the small shared module stays external and
+cacheable across pages. No test or extra verifier coverage was added.
+
+`yarn validate` passes. A `/portfolio-check/` production build and existing
+`check:build` pass; a separately mounted preview also loaded the prefixed menu
+module and navigated from `/portfolio-check/brand-guidelines/` to
+`/portfolio-check/#work` with the menu closed. Production output is restored to
+domain-root hosting before handoff. No deployment or CMS connection was made.
