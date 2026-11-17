@@ -558,8 +558,9 @@ is 132px high; its anchors retain the extra header clearance.
 
 The existing full `yarn validate` pipeline and repository-prefix production
 `build` / `check:build` pass under pinned Node 24.22.3. The checker covers local
-assets (including CSS fonts), Markdown-body URLs, structured media, fragments,
-metadata and local enhancement modules; no tests or extended verifier coverage
+assets referenced by HTML `href`/`src`, Markdown-body URLs, structured media,
+fragments, metadata and local enhancement modules. It does not parse CSS `url()`
+references: local font loading was checked separately in the browser. No tests or extended verifier coverage
 were added. Prefixed runtime inspection used port 4323, then that extra server
 was stopped and `dist/` was rebuilt for domain-root hosting. Source port 4322 was
 restarted after the new schema left its HMR content store stale; clearing the
@@ -581,3 +582,37 @@ pixel-diff baseline or claim of exact pixel equivalence. The AFK collage remains
 limited to the available 1155px source. Browser host/pointer tools were
 intermittent; recovered screenshots and independent destination/DOM readings
 supplemented successful native pointer and keyboard operations.
+
+## Ticket 07 code review
+
+The implement skill's fresh-context, parallel two-axis review compared
+`dddc02669117daada8b99562f2b4b9004421305d` to candidate `1c49267`.
+
+### Standards
+
+No actionable findings. The validated Markdown recovery content, shared shell,
+scoped presentation and centralized tokens follow the repository decisions, with
+no baseline smell requiring a change. The reviewer independently confirmed root
+production/source nested 404 responses, recovery destinations and indexing.
+
+### Spec
+
+One P3 documentation finding: the verification record overstated the existing
+checker's coverage of CSS font URLs. Resolved by distinguishing its HTML
+`href`/`src` checks from separate browser font-loading verification. A second minor
+README aside was corrected: the body-link URL is an example, not an existing
+Brand Markdown-body link. The Brand cross-link is composed with `withBase`.
+No functional omission, unrequested scope or incorrect site behavior was found.
+The reviewer inspected source, root production HTML/CSS and HTTP responses; it
+relied on the recorded browser evidence for visual, responsive, keyboard/history,
+prefixed runtime and script-disabled checks.
+
+Review totals: Standards 0 findings; Spec 1 P3 finding resolved, plus the README
+accuracy correction. The existing full validation and prefix checks passed before
+these prose-only review corrections; final formatting passes. The root agent's
+production/source gate independently confirmed all five routes return HTTP 200,
+nested unknown routes return HTTP 404, and the 320px root recovery has unchanged
+copy, `noindex`, no canonical, correct recovery URL and no horizontal overflow.
+Its final pointer/screenshot tools disconnected, so no additional root screenshot
+or completed recovery click is claimed. Root production output remains restored,
+source and production servers remain running, and no prefix server remains.

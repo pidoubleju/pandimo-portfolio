@@ -44,7 +44,7 @@ Pages CMS nested objects/lists and Markdown editing. No CMS is connected or need
 Markdown-body URLs resolve from the rendered page URL, not the content file's
 location. On the front page use `./images/your-image.webp`; on an expertise page
 use `../images/your-image.webp`. For an expertise-to-expertise link use
-`../paid-and-organic-content/` (as in the Brand record). Same-page links use
+`../paid-and-organic-content/`. Same-page links use
 `#section-id`. Avoid root-absolute body URLs such as `/images/...`, which bypass
 the repository prefix; `withBase` applies to structured fields, not Markdown.
 Run both root and prefix checks after editing body links or media paths.
