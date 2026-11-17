@@ -1,0 +1,65 @@
+{
+  "note": "Original supplied portfolio artwork. No separate artwork license notice was exposed by the source. The cap URL has a .png suffix but contains JPEG data; its original bytes and source filename are retained. Delivery uses WebP quality 95 at a maximum width of 1760px without upscaling. Desktop and mobile backpack variants remain separate, as supplied.",
+  "assets": [
+    {
+      "file": "cap.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/599bd5f7c6e0386a8592b44978230dea1a26b4b9.png",
+      "dimensions": [2867, 4096],
+      "sha256": "1a3950fe473cd5273431124b75f6a1ab45e24eacd852b3ebba07b46e1f069168",
+      "format": "jpeg",
+      "delivery": {
+        "file": "cap.webp",
+        "width": 1760,
+        "height": 2514
+      }
+    },
+    {
+      "file": "backpack-desktop.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/e69baa76dda5a2312c20653a304533719c91febe.png",
+      "dimensions": [1086, 1448],
+      "sha256": "f727e7f0a1630986fd40c26bc1cceb043d79b1dbbd5cc5c0ae96f7eb27052b3d",
+      "format": "png",
+      "delivery": {
+        "file": "backpack-desktop.webp",
+        "width": 1086,
+        "height": 1448
+      }
+    },
+    {
+      "file": "embroidery.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/76df7db7d5f9ca03afb5b031a3fa95a9e0449410.png",
+      "dimensions": [896, 1200],
+      "sha256": "2a9a9d5d45964ea57821d86044e2eb2dc4f17faed3f631a169b2ccb31330dbaf",
+      "format": "png",
+      "delivery": {
+        "file": "embroidery.webp",
+        "width": 896,
+        "height": 1200
+      }
+    },
+    {
+      "file": "moodboard.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/eb426ea43220d2f60ad55356317c6d835ec3c880.png",
+      "dimensions": [2428, 1404],
+      "sha256": "982b15b2d2a3103f6ceff3b1ca84696e5a362cd4b3dd9bc7abb9dc341bdf9205",
+      "format": "png",
+      "delivery": {
+        "file": "moodboard.webp",
+        "width": 1760,
+        "height": 1018
+      }
+    },
+    {
+      "file": "backpack-mobile.png",
+      "url": "https://guitar-fence-23515820.figma.site/_assets/v11/42b8d9eaf5612ebe8700e7e61c113ae978ebcce5.png",
+      "dimensions": [1086, 1448],
+      "sha256": "1a22236b5316fbd4b8bd7dbecf4068b1f63eb26e2bb06ba0d207e51c492efdc5",
+      "format": "png",
+      "delivery": {
+        "file": "backpack-mobile.webp",
+        "width": 1086,
+        "height": 1448
+      }
+    }
+  ]
+}

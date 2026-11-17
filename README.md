@@ -25,8 +25,9 @@ serves the production build. The default canonical origin is `https://example.co
   and prose, contact section. The Markdown body holds the AFK prose.
 - `src/content/expertise/*.md`: one canonical record per expertise area. Its
   preview fields feed the front page; introduction and metadata fields feed the
-  corresponding expertise page. Brand guidelines also contains its complete body
-  in named `brandGuidelines` fields; tickets 04–06 add the remaining bodies.
+  corresponding expertise page. Brand guidelines and Merch & brand experience
+  contain their complete bodies in named `brandGuidelines` and
+  `merchBrandExperience` fields; tickets 05–06 add the remaining bodies.
 
 Edit text and media paths in these Markdown files. Keep YAML frontmatter between
 `---` delimiters. Lists and nested records are validated by `src/content.config.ts`;
@@ -80,9 +81,10 @@ excludes the repository path; `BASE_PATH` includes both leading and trailing `/`
 
 The original design is the visual authority. See `docs/design-adaptation.md`,
 `docs/reference-inventory.json`, and `docs/design-verification.md` for references,
-source copy, media URLs, verification, and any limits. Original home and Brand guidelines assets are
-retained in `.scratch/design-adaptation/source-assets/`; delivery variants and
-original SVGs live in `public/images/home/` and `public/images/brand/`. Brand
+source copy, media URLs, verification, and any limits. Original home, Brand guidelines and
+Merch & brand experience assets are retained in `.scratch/design-adaptation/source-assets/`;
+delivery variants and original SVGs live in the corresponding `public/images/`
+directories. Merch raster variants use WebP quality 95 without upscaling. Brand
 guideline raster variants use lossless WebP; its Shine logo retains the PNG. Inter and Space
 Grotesk font files are local, with OFL notices in `public/licenses/`.
 The local Phosphor List icon retains its MIT notice in the same directory.

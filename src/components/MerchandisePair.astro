@@ -1,0 +1,121 @@
+---
+import { withBase } from '../lib/paths';
+
+interface Image {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}
+
+interface Props {
+  figures: {
+    heading: string;
+    description: string;
+    image: Image;
+    mobileImage?: Image | undefined;
+  }[];
+  brand: 'sevdesk' | 'shine';
+  credit: string;
+}
+
+const { figures, brand, credit } = Astro.props;
+---
+
+<div class:list={['merchandise-pair', brand]}>
+  {figures.map((figure, index) => (
+    <figure>
+      <div
+        class:list={[
+          'media-tile',
+          { backpack: brand === 'sevdesk' && index === 1 },
+        ]}
+      >
+        <picture>
+          {figure.mobileImage && (
+            <source
+              media="(max-width: 700px)"
+              srcset={withBase(figure.mobileImage.src)}
+              width={figure.mobileImage.width}
+              height={figure.mobileImage.height}
+            />
+          )}
+          <img
+            src={withBase(figure.image.src)}
+            width={figure.image.width}
+            height={figure.image.height}
+            alt={figure.image.alt}
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+      </div>
+      <figcaption class="copy-stack">
+        <h3>{figure.heading}</h3>
+        <p class="muted">{figure.description}</p>
+      </figcaption>
+    </figure>
+  ))}
+</div>
+<p class="production-credit muted">{credit}</p>
+
+<style>
+  .merchandise-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-medium);
+    margin-top: var(--space-layout);
+  }
+
+  .media-tile {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+
+  picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .backpack {
+    background: white;
+  }
+
+  .backpack picture {
+    display: grid;
+    place-items: center;
+  }
+
+  .backpack img {
+    width: 83.16%;
+    height: auto;
+  }
+
+  figcaption {
+    margin-top: var(--space-layout);
+  }
+
+  .sevdesk h3 {
+    font-size: var(--text-subheading);
+  }
+
+  .production-credit {
+    margin-top: var(--space-layout);
+    font: 400 var(--text-ui) / var(--leading-heading) var(--font-heading);
+  }
+
+  @media (max-width: 700px) {
+    .merchandise-pair {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-layout);
+    }
+  }
+</style>

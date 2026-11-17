@@ -233,3 +233,62 @@ Review totals: Standards 1 low finding resolved; Spec 0 findings. The root agent
 final production gate passed at 320px with the complete body and template tail,
 all six media, correct brand anchors and previous/next URLs, and no horizontal
 overflow. All six routes returned HTTP 200.
+
+## Ticket 04: complete Merch & brand experience
+
+The Merch desktop and mobile Figma frames were inspected on the signed-in canvas,
+including the overall paired desktop figures, stacked mobile figures and the
+event outcome. A 50% view confirmed the beige outcome panel, its statistic,
+heading and prose, and the lower desktop/mobile hierarchy. The composition keeps
+the 880px desktop column with two square 424px media tiles separated by 32px;
+mobile stacks the audience groups and figures, retaining their captions beside
+their associated artwork in document order. Flexible gutters bridge the designs.
+
+The complete original live copy, audience descriptions, figure captions,
+production credits and event callout live in named, validated
+`merchBrandExperience` fields in the canonical Markdown record. The introduction
+and metadata remain shared. `BrandIntroduction` now permits the absent role line
+in these brand sections, while `MerchandisePair` owns the repeated paired-figure
+and production-credit pattern. The page's audience and event arrangements remain
+in its own Astro composition. The rendered production main text exactly matches
+the captured reference after whitespace normalization, without hidden duplicates.
+
+Five source files are retained in
+`.scratch/design-adaptation/source-assets/merch/`, with source URLs, SHA-256 hashes,
+formats, dimensions and delivery sizes in `provenance.json`. They show four
+subjects: the cap is 2867 × 4096; the two separate desktop/mobile backpack images
+are 1086 × 1448; embroidery is 896 × 1200; the moodboard is 2428 × 1404. The cap's
+source URL ends in `.png` but contains JPEG data; its bytes remain unchanged.
+Local WebP variants use quality 95, a maximum width of 1760px and no upscaling.
+The original crops remain square, with the backpack set against white. The
+mobile picture source preserves the original transparent backpack variant.
+All four figures have explicit dimensions, descriptive alt text and lazy loading.
+No separate artwork license notice was exposed by the supplied portfolio source;
+no artwork or copy was invented or substituted, and existing font/icon notices
+remain retained.
+
+`yarn validate` passes, as do the `/portfolio-check/` production build and existing
+`check:build`. Browser DOM inspection covered 1280px, 768px, 390px and 320px
+without horizontal overflow: desktop/tablet pairs retain two equal columns and
+mobile stacks them. All four source-runtime images loaded, including selection
+of the mobile backpack; all five production media URLs and the local menu module
+returned HTTP 200 under the prefix. The prefixed direct route loads both original
+font families and all expected native destinations. Native previous navigation
+reached Brand guidelines, next reached Paid & organic content, the top link
+returned to scroll position zero, and the header Contact link reached the
+front-page contact fragment.
+
+A same-origin sandbox iframe without `allow-scripts` verified the actual
+script-disabled prefixed page at 320px: the complete body and outcome remained,
+all four header links were visible, the menu toggle stayed hidden, no horizontal
+overflow occurred, and native previous navigation opened Brand guidelines.
+Shared global focus styling and the native link semantics are retained.
+
+The browser host intermittently disconnected. Source screenshots were obtained,
+but subsequent screenshot capture failed even while DOM inspection, resizing,
+native navigation and the iframe check worked. Visual verification therefore
+uses those source canvas views and measured runtime composition, without a final
+runtime screenshot comparison or an assertion of exact pixel equivalence. Only
+existing checks and browser/read-only shell verification were used; no tests or
+verifier coverage were added. Domain-root production output is restored before
+handoff. No deployment or CMS connection was made.

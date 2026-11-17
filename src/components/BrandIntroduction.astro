@@ -4,7 +4,7 @@ interface Props {
     label: string;
     heading: string[];
     description: string;
-    role: string;
+    role?: string;
   };
   brand: 'sevdesk' | 'shine';
 }
@@ -20,7 +20,7 @@ const { introduction, brand } = Astro.props;
     ))}
   </h2>
   <p class="brand-description">{introduction.description}</p>
-  <p class="role muted">{introduction.role}</p>
+  {introduction.role && <p class="role muted">{introduction.role}</p>}
 </header>
 
 <style>

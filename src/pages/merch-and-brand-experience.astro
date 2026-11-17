@@ -1,8 +1,92 @@
 ---
+import BrandIntroduction from '../components/BrandIntroduction.astro';
+import MerchandisePair from '../components/MerchandisePair.astro';
 import ExpertiseLayout from '../layouts/ExpertiseLayout.astro';
 import { getExpertise } from '../lib/content';
 
 const area = await getExpertise('merch-and-brand-experience');
+const content = area.data.merchBrandExperience;
+if (!content)
+  throw new Error('Merch & brand experience body content is missing');
+const { sevdesk, shine, event } = content;
 ---
 
-<ExpertiseLayout area={area} />
+<ExpertiseLayout area={area}>
+  <section class="merch-brand" aria-labelledby="sevdesk-heading">
+    <BrandIntroduction introduction={sevdesk} brand="sevdesk" />
+    <div class="audiences">
+      {sevdesk.audiences.map((audience) => (
+        <div class="copy-stack">
+          <h3>{audience.heading}</h3>
+          <p class="muted">{audience.description}</p>
+        </div>
+      ))}
+    </div>
+    <MerchandisePair
+      figures={sevdesk.figures}
+      brand="sevdesk"
+      credit={sevdesk.credit}
+    />
+  </section>
+
+  <section class="merch-brand shine" aria-labelledby="shine-heading">
+    <BrandIntroduction introduction={shine} brand="shine" />
+    <MerchandisePair
+      figures={shine.figures}
+      brand="shine"
+      credit={shine.credit}
+    />
+    <section class="event-callout copy-stack" aria-labelledby="event-heading">
+      <p class="label">{event.label}</p>
+      <h3 id="event-heading">{event.statistic}</h3>
+      <p class="event-title heading">{event.heading}</p>
+      <p>{event.description}</p>
+    </section>
+  </section>
+</ExpertiseLayout>
+
+<style>
+  .merch-brand {
+    margin-top: var(--space-section);
+  }
+
+  .audiences {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-medium);
+    margin-top: var(--space-layout);
+  }
+
+  .audiences .copy-stack > * + * {
+    margin-top: var(--space-tight);
+  }
+
+  .shine :global(.brand-description) {
+    font-size: var(--text-body);
+  }
+
+  .event-callout {
+    margin-top: var(--space-layout);
+    padding: var(--space-medium);
+    background: var(--callout);
+  }
+
+  .event-callout h3 {
+    font-size: var(--text-section-heading);
+  }
+
+  .event-title {
+    font-size: var(--text-subsection);
+  }
+
+  @media (max-width: 700px) {
+    .audiences {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-layout);
+    }
+
+    .event-callout h3 {
+      font-size: var(--text-section-heading-mobile);
+    }
+  }
+</style>

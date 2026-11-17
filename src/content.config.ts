@@ -63,6 +63,29 @@ const brandIntroduction = z.object({
   image,
 });
 const contentGroup = z.object({ heading: text, lines: z.array(text).min(1) });
+const merchIntroduction = z.object({
+  label: text,
+  heading: z.array(text).min(1),
+  description: text,
+});
+const merchFigure = proseItem.extend({ image, mobileImage: image.optional() });
+const merchBrandExperience = z.object({
+  sevdesk: merchIntroduction.extend({
+    audiences: z.array(proseItem).length(2),
+    figures: z.array(merchFigure).length(2),
+    credit: text,
+  }),
+  shine: merchIntroduction.extend({
+    figures: z.array(merchFigure).length(2),
+    credit: text,
+  }),
+  event: z.object({
+    label: text,
+    statistic: text,
+    heading: text,
+    description: text,
+  }),
+});
 const brandGuidelines = z.object({
   exploration: z.object({
     sevdesk: z.object({ heading: text, description: text, linkLabel: text }),
@@ -125,6 +148,7 @@ const expertise = defineCollection({
       })
     ),
     brandGuidelines: brandGuidelines.optional(),
+    merchBrandExperience: merchBrandExperience.optional(),
     nextLabel: text.optional(),
     nextLinkLabel: text.optional(),
   }),
