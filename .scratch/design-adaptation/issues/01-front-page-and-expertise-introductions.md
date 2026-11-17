@@ -15,37 +15,51 @@ Reuse coherent visual patterns without introducing a universal page builder.
 
 **Blocked by:** None (can start immediately).
 
-**Status:** ready-for-agent
+**Status:** implemented — review pending
 
-- [ ] The full front page includes the unchanged introduction, all four expertise
+- [x] The full front page includes the unchanged introduction, all four expertise
       previews, AFK artwork and copy, contact details, and existing labels.
-- [ ] Each preview links to a real expertise page with its unchanged introduction
+- [x] Each preview links to a real expertise page with its unchanged introduction
       and metadata. These pages are explicitly the first slice of the final pages;
       their complete body sections are delivered by tickets 03–06.
-- [ ] Expertise preview and introduction fields come from one canonical record
+- [x] Expertise preview and introduction fields come from one canonical record
       per area. An editor can change a preview field without editing a template
       or maintaining duplicate copies of that field.
-- [ ] Shared identity and navigation copy are editable content. Header links
+- [x] Shared identity and navigation copy are editable content. Header links
       reach the correct front-page sections from every route. Name, email, top,
       overview, and fixed-sequence previous/next links have valid destinations.
-- [ ] Original local fonts, images, palette, type and spacing rules reproduce the
+- [x] Original local fonts, images, palette, type and spacing rules reproduce the
       front-page reference layouts, with fluid behavior between them. Preserve
       the AFK collage as a single image and retain applicable asset licenses.
-- [ ] Replace fictional project content and routes without leaving broken local
+- [x] Replace fictional project content and routes without leaving broken local
       links. The static 404 page retains usable recovery navigation.
-- [ ] The navigation is visible and usable on narrow screens without scripts.
+- [x] The navigation is visible and usable on narrow screens without scripts.
       Expandable mobile behavior is added by ticket 02.
-- [ ] Copy and media are checked against the references. Source-resolution
+- [x] Copy and media are checked against the references. Source-resolution
       limitations or missing assets are documented instead of replaced with
       invented content. The production build and existing checks pass.
 
-- [ ] The delivered surface matches the original palette, typography, spacing,
+- [x] The delivered surface matches the original palette, typography, spacing,
       artwork, and intended desktop/mobile composition, and remains usable at
       intermediate widths and 320px without accidental horizontal overflow.
-- [ ] Core content and navigation work without JavaScript. Any agreed enhancement
+- [x] Core content and navigation work without JavaScript. Any agreed enhancement
       preserves keyboard access and visible focus; images remain inline.
-- [ ] Content and local assets resolve under both domain-root and repository-prefix
+- [x] Content and local assets resolve under both domain-root and repository-prefix
       hosting. Existing source and production-build checks pass, with meaningful
       verification of the behavior delivered by this ticket.
-- [ ] No CMS connection or public deployment is required by this ticket. Retain
+- [x] No CMS connection or public deployment is required by this ticket. Retain
       applicable asset licenses and do not substitute invented copy or artwork.
+
+## Implementation evidence
+
+The original front page and four expertise introductions are implemented with
+canonical Markdown records, local fonts/media and static navigation. Full bodies
+remain explicitly scoped to tickets 03–06. Source/visual notes and asset dimensions
+are recorded in `docs/design-verification.md`; all five reference copy/media
+inventories are retained in `docs/reference-inventory.json`.
+
+`yarn validate` passes. Both root and `/portfolio-check/` production builds pass
+`yarn check:build`, and prefixed font URLs were inspected in emitted CSS. Browser
+checks cover 1280px, 768px and 320px; front-page live copy matches the source, core
+links are native, and no accidental horizontal overflow was observed. The user
+requested existing checks/browser verification only; no test coverage was added.

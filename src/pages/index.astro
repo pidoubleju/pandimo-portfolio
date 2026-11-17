@@ -1,110 +1,198 @@
 ---
-import ProjectCard from '../components/ProjectCard.astro';
-import { site } from '../data/site';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { getProjects } from '../lib/projects';
+import { render } from 'astro:content';
 
-const projects = await getProjects();
+import ExpertisePreview from '../components/ExpertisePreview.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getExpertiseAreas, getHome, getSite } from '../lib/content';
+import { withBase } from '../lib/paths';
+
+const home = await getHome();
+const site = await getSite();
+const areas = await getExpertiseAreas();
+const { introduction, work, afk, contact } = home.data;
+const { Content: AfkCopy } = await render(home);
 ---
 
 <BaseLayout>
-  <section class="hero container" aria-labelledby="intro-heading">
-    <div class="hero-topline">
-      <p class="eyebrow">Independent portfolio</p>
-      <p class="hero-note">
-        A little curiosity.
-        <br />A lot of intention.
-      </p>
-    </div>
-    <h1 id="intro-heading">
-      Thoughtful design.
-      <br />
-      <span>Made for people.</span>
-    </h1>
-    <div class="hero-bottom">
-      <p>
-        Hi, I’m {site.name}. I turn ideas into clear identities
-        <br class="desktop-break" /> and considered digital experiences.
-      </p>
-      <a class="round-link" href="#work" aria-label="Explore selected work">
-        ↓
-      </a>
-    </div>
-  </section>
-
-  <section
-    class="work-section container"
-    id="work"
-    aria-labelledby="work-heading"
-  >
-    <div class="section-heading">
-      <h2 id="work-heading">
-        Selected work
-        <span class="count">({String(projects.length).padStart(2, '0')})</span>
-      </h2>
-      <p>A few ideas, brought to life.</p>
-    </div>
-    <div class="project-grid">
-      {projects.map((project, index) => (
-        <ProjectCard project={project} index={index} />
-      ))}
+  <section class="hero container" id="about" aria-labelledby="intro-heading">
+    <img
+      class="portrait"
+      src={withBase(introduction.image.src)}
+      width={introduction.image.width}
+      height={introduction.image.height}
+      alt={introduction.image.alt}
+      fetchpriority="high"
+    />
+    <div class="copy-stack">
+      <p class="label">{introduction.label}</p>
+      <h1 id="intro-heading">
+        {introduction.heading.map((line) => (
+          <span class="heading-line">{line}</span>
+        ))}
+      </h1>
+      <p>{introduction.description}</p>
+      <p class="muted">{introduction.experience}</p>
+      <div class="hero-links">
+        <a class="text-link" href="#work">
+          {introduction.workLabel}
+        </a>
+        <a class="text-link" href={`mailto:${site.email}`}>
+          {introduction.contactLabel}
+        </a>
+      </div>
     </div>
   </section>
 
-  <section
-    class="about-section container"
-    id="about"
-    aria-labelledby="about-heading"
-  >
-    <p class="eyebrow">A little about me</p>
-    <div>
-      <h2 id="about-heading">
-        Curious by nature.
-        <br />
-        <span>Considered by design.</span>
-      </h2>
-      <p>
-        I’m {site.name}, a designer who enjoys asking questions, finding the
-        simple thread in a complex idea, and making things that feel good to
-        use.
-      </p>
-      <p>
-        This is a starting collection of sample projects. Real stories, new
-        collaborations, and a little more personality will follow.
-      </p>
-      <div class="expertise" aria-label="Areas of interest">
-        <span>Visual identity</span>
-        <span>Digital design</span>
-        <span>Art direction</span>
+  <section class="work-section" id="work" aria-labelledby="work-heading">
+    <div class="container">
+      <header class="work-heading">
+        <p class="label">{work.label}</p>
+        <h2 id="work-heading">{work.heading}</h2>
+        <p class="muted">{work.description}</p>
+      </header>
+      <div class="expertise-previews">
+        {areas.map((area) => (
+          <ExpertisePreview area={area} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="afk-section container" id="afk" aria-labelledby="afk-heading">
+    <p class="label">{afk.label}</p>
+    <div class="afk-art">
+      <img
+        src={withBase(afk.image.src)}
+        width={afk.image.width}
+        height={afk.image.height}
+        alt={afk.image.alt}
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+    <div class="copy-stack">
+      <h2 id="afk-heading">{afk.heading}</h2>
+      <div class="afk-copy">
+        <AfkCopy />
       </div>
     </div>
   </section>
 
   <section
-    class="contact-section"
+    class="contact-section container copy-stack"
     id="contact"
     aria-labelledby="contact-heading"
   >
-    <div class="container contact-inner">
-      <p class="eyebrow">Have something in mind?</p>
-      <h2 id="contact-heading">
-        Good things start
-        <br />
-        with a conversation<span aria-hidden="true">.</span>
-      </h2>
-      <a class="button" href={`mailto:${site.email}`}>
-        Say hello <span aria-hidden="true">↗</span>
-      </a>
-      <div class="contact-bottom">
-        <a href={`mailto:${site.email}`}>{site.email}</a>
-        <nav aria-label="Social links">
-          {site.socials.map((social) => (
-            <a href={social.url}>
-              {social.label} <span aria-hidden="true">↗</span>
-            </a>
-          ))}
-        </nav>
-      </div>
-    </div>
+    <p class="label">{contact.label}</p>
+    <h2 id="contact-heading">{contact.heading}</h2>
+    <a class="email-link heading" href={`mailto:${site.email}`}>
+      {contact.emailLabel}
+    </a>
+    <footer class="home-footer">
+      <p>{site.footerIdentity}</p>
+      <a href="#top">{site.topLabel}</a>
+    </footer>
   </section>
 </BaseLayout>
+
+<style>
+  .hero {
+    padding-block: 4.125rem var(--space-section);
+  }
+
+  .portrait {
+    width: min(100%, 29.71375rem);
+    aspect-ratio: 475.42 / 420.57;
+    object-fit: cover;
+    margin-bottom: var(--space-copy);
+    border-radius: var(--radius);
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .work-section {
+    padding-block: var(--space-section);
+    border-top: 1px solid var(--line);
+  }
+
+  .work-heading > * + * {
+    margin-top: var(--space-small);
+  }
+
+  .expertise-previews {
+    display: grid;
+    gap: 3.125rem;
+    margin-top: 3.125rem;
+  }
+
+  .afk-section {
+    padding-block: var(--space-section) 0;
+  }
+
+  .afk-art {
+    display: grid;
+    place-items: center;
+    min-height: 20.1665rem;
+    margin-block: var(--space-copy);
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--ink);
+  }
+
+  .afk-art img {
+    width: min(100%, 36.09375rem);
+  }
+
+  .contact-section {
+    padding-block: var(--space-large) 2rem;
+  }
+
+  .email-link {
+    display: block;
+    width: fit-content;
+    font-size: 1.25rem;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+  }
+
+  .email-link:hover {
+    text-decoration: underline;
+  }
+
+  .home-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .home-footer a {
+    color: var(--ink);
+  }
+
+  @media (max-width: 700px) {
+    .hero {
+      padding-top: 3rem;
+    }
+
+    .portrait {
+      width: min(100%, 17.9375rem);
+    }
+
+    .hero-links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .afk-art {
+      min-height: 0;
+      padding-block: 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,43 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import ExpertiseIntroduction from '../components/ExpertiseIntroduction.astro';
+import ExpertiseNavigation from '../components/ExpertiseNavigation.astro';
+import { getSite } from '../lib/content';
+import { withBase } from '../lib/paths';
+
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  area: CollectionEntry<'expertise'>;
+}
+
+const { area } = Astro.props;
+const site = await getSite();
+---
+
+<BaseLayout
+  title={area.data.title}
+  description={area.data.introduction.description}
+>
+  <div class="expertise-page container">
+    <a class="text-link" href={withBase('#work')}>
+      {site.allWorkLabel}
+    </a>
+    <ExpertiseIntroduction area={area} />
+    <slot />
+    <ExpertiseNavigation id={area.id} />
+  </div>
+</BaseLayout>
+
+<style>
+  .expertise-page {
+    padding-top: 4rem;
+  }
+
+  @media (max-width: 700px) {
+    .expertise-page {
+      padding-top: 2.5rem;
+    }
+  }
+</style>

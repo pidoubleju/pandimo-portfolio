@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  items: CollectionEntry<'expertise'>['data']['metadata'];
+}
+
+const { items } = Astro.props;
+---
+
+<dl class="metadata-group">
+  {items.map((item) => (
+    <div class="metadata-item">
+      <dt class="label">{item.label}</dt>
+      <dd>
+        {item.headings.map((heading) => (
+          <p class="metadata-heading heading">{heading}</p>
+        ))}
+        {item.description && (
+          <p class="metadata-description muted">{item.description}</p>
+        )}
+      </dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  .metadata-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-block: 1.5rem;
+    border-block: 1px solid var(--line);
+  }
+
+  .metadata-heading {
+    margin-top: 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1.15;
+  }
+
+  .metadata-description {
+    margin-top: 0.75rem;
+    font: 400 1rem / 1.2 var(--font-heading);
+  }
+
+  @media (max-width: 700px) {
+    .metadata-group {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>

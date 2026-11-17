@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import MetadataGroup from './MetadataGroup.astro';
+
+interface Props {
+  area: CollectionEntry<'expertise'>;
+}
+
+const { introduction, metadata } = Astro.props.area.data;
+---
+
+<header class="expertise-introduction copy-stack">
+  <p class="label">{introduction.label}</p>
+  <h1>
+    {introduction.heading.map((line) => (
+      <span class="heading-line">{line}</span>
+    ))}
+  </h1>
+  <p class="introduction-description muted">{introduction.description}</p>
+</header>
+{metadata.length > 0 && <MetadataGroup items={metadata} />}
+
+<style>
+  .expertise-introduction {
+    margin-top: 2rem;
+  }
+
+  h1 {
+    max-width: 52rem;
+    font-size: var(--text-page-title);
+    line-height: 1.14;
+  }
+
+  .introduction-description {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+</style>

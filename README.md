@@ -1,114 +1,69 @@
 # Mona portfolio
 
-A static portfolio built with Astro, TypeScript, plain CSS, and Markdown. The
-published site ships no browser JavaScript. Identity, links, illustrations, and
-case studies are placeholders ready to replace.
+Mona Schmidt’s portfolio, built with Astro, TypeScript, plain CSS, and validated
+Markdown. Static output supports GitHub Pages at a domain root or repository
+prefix. No database, CMS account, or application secrets are required.
 
 ## Run locally
 
-Use Node **24.22.3 LTS** (pinned in `.nvmrc` and `engines`) and Yarn **4.18.1**.
-With [nvm](https://github.com/nvm-sh/nvm) installed:
+Use Node **24.22.3** (`.nvmrc`) and Yarn **4.18.1**:
 
 ```sh
-nvm install
 nvm use
 corepack enable
 yarn install --immutable
 yarn dev
 ```
 
-Open <http://localhost:4321>. `yarn build` writes static files to `dist/`;
-`yarn preview` serves that build. No database, CMS, or application secrets are
-required. If your Node installation lacks Corepack, install
-[Corepack](https://yarnpkg.com/corepack) first.
+Open <http://localhost:4321>. `yarn build` writes to `dist/`; `yarn preview`
+serves the production build. The default canonical origin is `https://example.com`.
 
-## Make it yours
+## Edit content
 
-- Edit `src/data/site.ts` for the name, role, description, email, and social links.
-  The current email and social destinations are deliberately placeholders.
-- Edit `src/pages/index.astro` for the introduction and about copy.
-- Edit `src/styles/global.css` for colours, typography, and layout.
-- Replace `public/favicon.svg` and the sample illustrations in `public/images/`.
+- `src/content/pages/site.md`: shared identity, navigation labels and contact.
+- `src/content/pages/home.md`: introduction, selected-work heading, AFK artwork
+  and prose, contact section. The Markdown body holds the AFK prose.
+- `src/content/expertise/*.md`: one canonical record per expertise area. Its
+  preview fields feed the front page; introduction and metadata fields feed the
+  corresponding expertise page. These pages are first slices; tickets 03–06 add
+  their full bodies.
 
-System fonts and local SVG artwork keep the starter self-contained. There are no
-external fonts, analytics, hydration directives, or client-side navigation.
+Edit text and media paths in these Markdown files. Keep YAML frontmatter between
+`---` delimiters. Lists and nested records are validated by `src/content.config.ts`;
+`yarn typecheck` and `yarn build` report invalid records. Media records keep local
+`src`, source `width`/`height`, and descriptive `alt` text together. Put delivery
+assets in `public/images/` and use `/images/...` content paths; templates apply the
+configured hosting prefix automatically.
 
-## Add a project
+Layout stays in Astro and CSS. The front page and each expertise page have their
+own composition; shared components own repeated previews, introductions,
+metadata, and fixed-sequence navigation. The fields are compatible with future
+Pages CMS nested objects/lists and Markdown editing. No CMS is connected or needed.
 
-Create a lowercase, hyphenated Markdown filename directly inside
-`src/content/projects/`, for example `your-project.md`. Copy an existing project
-and replace its frontmatter and body:
-
-```markdown
----
-title: Your project
-summary: A short description for the grid and page metadata.
-category: Visual identity
-year: 2026
-role: Design & art direction
-cover: /images/your-project.svg
-coverAlt: Describe what the project cover shows.
-order: 4
-draft: false
----
-
-## The brief
-
-Describe the problem and your contribution.
-
-## The approach
-
-Explain the choices behind the work.
-
-## The outcome
-
-Share the result and what you learned.
-```
-
-Put the cover file in `public/images/`. All shown frontmatter fields are required
-except `draft`, which defaults to `false`; `summary` has a 240-character limit.
-Projects appear by ascending `order`, then filename. The filename becomes the URL:
-`your-project.md` → `/projects/your-project/`. Rename it only if you intend to
-change that URL. Nested project directories and custom frontmatter slugs are not
-part of this starter.
-
-`draft: true` removes a project from both the grid and generated routes, including
-in local development. All published projects share `ProjectLayout.astro`.
-`src/content.config.ts` validates the content schema during builds.
-
-For links between projects in Markdown, use relative URLs such as
-`[another project](../still/)`. For inline images use relative URLs such as
-`![Description](../../images/your-image.svg)`. These resolve correctly both at the
-domain root and under a repository path. Avoid `/images/...` or `/projects/...`
-in Markdown body links: those bypass a GitHub Pages repository prefix. The
-frontmatter `cover` field is automatically prefixed by the template.
+Use relative URLs for links/media inside Markdown bodies, such as
+`../../images/your-image.webp`, so they resolve under both hosting path shapes.
+Do not change expertise filenames or routes without updating the fixed sequence
+in `src/lib/content.ts`. Identity/navigation copy should be changed in `site.md`.
 
 ## Checks
 
 ```sh
-yarn validate  # all checks, production build, and generated-site verification
+yarn validate  # source checks, production build, and generated-site verification
 yarn format    # apply formatting
 yarn lint:fix  # fix eligible lint issues
 ```
 
-| Command                   | Effective coverage                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `yarn typecheck`          | Astro diagnostics for templates and frontmatter, plus `tsc --noEmit` for all authored TypeScript, config, and scripts. Uses Astro's `strictest` preset, including strict null checks and unchecked index access.                                                                                                                                                        |
-| `yarn lint`               | Zero warnings. Type-aware `strictTypeChecked` rules for `.ts`; Astro recommended and accessibility rules for `.astro`. Unused imports/variables, sorted imports/exports, and the two xrealm regexp rules apply to both. Exhaustive switches and invalid-void checks apply to `.ts`.                                                                                     |
-| `yarn format:check`       | xrealm's formatting settings across TS, Astro, CSS, Markdown, JSON, and YAML. SVG assets have no Prettier parser. The supplied `spec.md`, generated files, and lockfile are excluded.                                                                                                                                                                                   |
-| `yarn check:unused`       | Knip's Astro, ESLint, and Prettier integrations follow framework entry points and component imports, and check unused files, exports, and dependencies. Runtime-loaded tooling is detected through the integrations; no dependency ignores are needed. Markdown content and public assets are not unused-code candidates.                                               |
-| `yarn check:dependencies` | Dependency Cruiser rejects cycles and imports from data/helpers into UI modules. It follows TypeScript/config/script imports; it does **not** parse `.astro`, Markdown, or CSS. Astro template resolution is checked by Astro and Knip, not by this command.                                                                                                            |
-| `yarn check:build`        | Requires a preceding build with the same environment. Parses every HTML page; checks home/404 output, local links/assets/fragments, nonempty page titles, canonical URLs on indexable pages, descriptions, language, image alt text, 404 indexing, and absence of JavaScript output, script tags, hydration, or inline handlers. External destinations are not fetched. |
+The existing pipeline includes Astro/TypeScript diagnostics, type-aware ESLint,
+accessibility linting, Prettier, Knip, and Dependency Cruiser. The production
+checker validates local links, assets and fragments; language, image descriptions,
+page titles, descriptions, canonicals and 404 indexing. It currently prohibits
+browser JavaScript; ticket 02 revises only that policy for the agreed mobile menu.
 
-`yarn check` runs all source checks without a production build. CSS is formatted;
-there is no Stylelint policy in the source xrealm configuration to carry over.
-Astro templates receive syntax, accessibility, and unused-import checks plus
-Astro's TypeScript diagnostics; **type-aware ESLint rules apply only to `.ts`**.
-Next.js, React, Payload, generated-registry exceptions, and theme-specific
-dependency rules do not apply to this repository. No blanket file exclusions are
-used to disguise missing framework coverage.
+The user requested existing checks and browser verification only. Responsive,
+copy and navigation verification supplement these checks without introducing a
+new test framework or added verifier coverage.
 
-CI validates both `/` and `/portfolio-check/` builds. To reproduce the latter:
+Verify repository-prefix hosting with:
 
 ```sh
 SITE_URL=https://example.com BASE_PATH=/portfolio-check/ yarn build
@@ -116,47 +71,29 @@ SITE_URL=https://example.com BASE_PATH=/portfolio-check/ yarn check:build
 BASE_PATH=/portfolio-check/ yarn preview
 ```
 
-The default build uses `https://example.com` for canonical URLs. For a manual
-production build, set `SITE_URL` to the origin (no repository path) and `BASE_PATH`
-to `/` or `/repository-name/`, including both slashes. These are build-time shell
-environment variables, not browser secrets or automatically loaded `.env` values.
+Rebuild without those variables to return to domain-root output. The origin
+excludes the repository path; `BASE_PATH` includes both leading and trailing `/`.
+
+## Source assets
+
+The original design is the visual authority. See `docs/design-adaptation.md`,
+`docs/reference-inventory.json`, and `docs/design-verification.md` for references,
+source copy, media URLs, verification, and any limits. Original home bitmaps are
+retained in `.scratch/design-adaptation/source-assets/home/`; WebP delivery
+variants and the original SVG live in `public/images/home/`. Inter and Space
+Grotesk font files are local, with OFL notices in `public/licenses/`.
+
+No copy or artwork has been generated to replace the source. The AFK collage
+remains a single image. The site remains public, without a password or image viewer.
 
 ## GitHub Pages
 
-1. Push this repository to GitHub with a `main` branch.
-2. In **Settings → Pages → Build and deployment**, select **GitHub Actions** as
-   the source. Ensure Actions are enabled for the repository.
-3. Push to `main` or run **Validate and deploy** manually from the Actions tab.
+The supplied `.github/workflows/pages.yml` validates root and repository-prefix
+builds. After repository setup, select GitHub Actions in **Settings → Pages →
+Build and deployment**. The deployment job derives the origin/base path with
+`actions/configure-pages` and publishes `dist/` on pushes to `main` or a manual run.
+Pull requests validate without deploying. Configure any repository/environment
+protections in GitHub. Custom domains are configured in Pages settings; this
+repository has no CNAME.
 
-Pull requests run checks and both build variants without deploying. Pushes to
-`main` must pass those jobs before a Pages artifact is built and deployed. The
-workflow reads the actual origin and base path with `actions/configure-pages`,
-so project sites (`/repository/`), account sites (`/`), and Pages-configured custom
-domains use the correct links and canonical URLs. For a custom domain, configure
-and verify it in Pages settings before rebuilding; this starter has no CNAME.
-
-Only the deployment job receives `pages: write` and `id-token: write`. Deployment
-uses the `github-pages` environment and serializes publishing. Configure required
-status checks and environment protection rules in GitHub as desired. Builds cannot
-configure those repository settings themselves. GitHub serves `dist/404.html` for
-missing paths; its home links remain rooted at the configured base.
-
-## Scope and sources
-
-The initial scaffold follows the available `spec.md`, which ends mid-sentence in
-the runtime section. Applicable linting, formatting, Knip, and Dependency Cruiser
-policies were read from the adjacent `xrealm-website` repository and adapted here;
-that repository was not modified. Astro 7.4.12 is pinned to the stable release
-available when this scaffold was created. Node 24 is a supported LTS line.
-Yarn's lockfile pins transitive dependencies as well as direct versions.
-
-- [Astro installation](https://docs.astro.build/en/install-and-setup/)
-- [Astro content collections](https://docs.astro.build/en/guides/content-collections/)
-- [Astro on GitHub Pages](https://docs.astro.build/en/guides/deploy/github/)
-- [Astro ESLint integration](https://ota-meshi.github.io/eslint-plugin-astro/user-guide/)
-- [Knip Astro support](https://knip.dev/reference/plugins/astro)
-- [Node release schedule](https://github.com/nodejs/Release)
-
-Final branding and copy, advanced galleries, animations, filtering, translation,
-analytics, contact processing, and CMS installation are deferred. Pages CMS could
-be added later on top of the same Markdown files.
+Implementation and local verification do not publish or deploy the site.

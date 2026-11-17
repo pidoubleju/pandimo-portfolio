@@ -1,0 +1,8 @@
+---
+import ExpertiseLayout from '../layouts/ExpertiseLayout.astro';
+import { getExpertise } from '../lib/content';
+
+const area = await getExpertise('merch-and-brand-experience');
+---
+
+<ExpertiseLayout area={area} />

@@ -1,0 +1,2120 @@
+{
+  "source": "https://guitar-fence-23515820.figma.site",
+  "design": "https://www.figma.com/site/V4coeQ71FQamNLs5xwgJCS/Portfolio-Mona-%E2%80%93-Sites?node-id=0-1",
+  "pages": {
+    "home": {
+      "fonts": [
+        "@font-face { font-family: \"Inter:Semi Bold\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-english.woff2\"); font-display: block; unicode-range: U+0-A0, U+A2-A9, U+AC-AE, U+B0-B7, U+B9-BA, U+BC-BE, U+D7, U+F7, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-21BB, U+2212, U+2215, U+F8FF, U+FEFF, U+FFFD; }",
+        "@font-face { font-family: \"Inter:Semi Bold\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-rest-latin.woff2\"); font-display: block; unicode-range: U+A1, U+AA-AB, U+AF, U+B8, U+BB, U+BF-D6, U+D8-F6, U+F8-FF, U+131, U+152-153, U+2B0-2FF; }",
+        "@font-face { font-family: \"Inter:Semi Bold\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-latin-extended-a.woff2\"); font-display: block; unicode-range: U+100-130, U+132-151, U+154-17F; }",
+        "@font-face { font-family: \"Inter:Semi Bold\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-latin-extended-b.woff2\"); font-display: block; unicode-range: U+180-24F; }",
+        "@font-face { font-family: \"Inter:Semi Bold\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-latin-extended-additional.woff2\"); font-display: block; unicode-range: U+1E00-1EFF; }",
+        "@font-face { font-family: \"Inter:Semi Bold\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-rest.woff2\"); font-display: block; unicode-range: U+250-2AF, U+300-1DFF, U+1F00-1FFF, U+2070-2073, U+2075-20AB, U+20AD-2121, U+2123-218F, U+21BC-2211, U+2213-2214, U+2216-F8FE, U+F900-FEFE, U+FF00-FFFC, U+FFFE-FFFF; }",
+        "@font-face { font-family: \"Inter:Regular\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-english.woff2\"); font-display: block; unicode-range: U+0-A0, U+A2-A9, U+AC-AE, U+B0-B7, U+B9-BA, U+BC-BE, U+D7, U+F7, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-21BB, U+2212, U+2215, U+F8FF, U+FEFF, U+FFFD; }",
+        "@font-face { font-family: \"Inter:Regular\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-rest-latin.woff2\"); font-display: block; unicode-range: U+A1, U+AA-AB, U+AF, U+B8, U+BB, U+BF-D6, U+D8-F6, U+F8-FF, U+131, U+152-153, U+2B0-2FF; }",
+        "@font-face { font-family: \"Inter:Regular\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-latin-extended-a.woff2\"); font-display: block; unicode-range: U+100-130, U+132-151, U+154-17F; }",
+        "@font-face { font-family: \"Inter:Regular\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-latin-extended-b.woff2\"); font-display: block; unicode-range: U+180-24F; }",
+        "@font-face { font-family: \"Inter:Regular\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-latin-extended-additional.woff2\"); font-display: block; unicode-range: U+1E00-1EFF; }",
+        "@font-face { font-family: \"Inter:Regular\"; font-style: normal; src: url(\"/_woff/v2/Inter_1/Inter_1-rest.woff2\"); font-display: block; unicode-range: U+250-2AF, U+300-1DFF, U+1F00-1FFF, U+2070-2073, U+2075-20AB, U+20AD-2121, U+2123-218F, U+21BC-2211, U+2213-2214, U+2216-F8FE, U+F900-FEFE, U+FF00-FFFC, U+FFFE-FFFF; }",
+        "@font-face { font-family: \"Space Grotesk:Regular\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-english.woff2\"); font-display: block; unicode-range: U+0-A0, U+A2-A9, U+AC-AE, U+B0-B7, U+B9-BA, U+BC-BE, U+D7, U+F7, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-21BB, U+2212, U+2215, U+F8FF, U+FEFF, U+FFFD; }",
+        "@font-face { font-family: \"Space Grotesk:Regular\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-rest-latin.woff2\"); font-display: block; unicode-range: U+A1, U+AA-AB, U+AF, U+B8, U+BB, U+BF-D6, U+D8-F6, U+F8-FF, U+131, U+152-153, U+2B0-2FF; }",
+        "@font-face { font-family: \"Space Grotesk:Regular\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-latin-extended-a.woff2\"); font-display: block; unicode-range: U+100-130, U+132-151, U+154-17F; }",
+        "@font-face { font-family: \"Space Grotesk:Regular\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-latin-extended-b.woff2\"); font-display: block; unicode-range: U+180-24F; }",
+        "@font-face { font-family: \"Space Grotesk:Regular\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-latin-extended-additional.woff2\"); font-display: block; unicode-range: U+1E00-1EFF; }",
+        "@font-face { font-family: \"Space Grotesk:Regular\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-rest.woff2\"); font-display: block; unicode-range: U+250-2AF, U+300-1DFF, U+1F00-1FFF, U+2070-2073, U+2075-20AB, U+20AD-2121, U+2123-218F, U+21BC-2211, U+2213-2214, U+2216-F8FE, U+F900-FEFE, U+FF00-FFFC, U+FFFE-FFFF; }",
+        "@font-face { font-family: \"Space Grotesk:Medium\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-english.woff2\"); font-display: block; unicode-range: U+0-A0, U+A2-A9, U+AC-AE, U+B0-B7, U+B9-BA, U+BC-BE, U+D7, U+F7, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-21BB, U+2212, U+2215, U+F8FF, U+FEFF, U+FFFD; }",
+        "@font-face { font-family: \"Space Grotesk:Medium\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-rest-latin.woff2\"); font-display: block; unicode-range: U+A1, U+AA-AB, U+AF, U+B8, U+BB, U+BF-D6, U+D8-F6, U+F8-FF, U+131, U+152-153, U+2B0-2FF; }",
+        "@font-face { font-family: \"Space Grotesk:Medium\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-latin-extended-a.woff2\"); font-display: block; unicode-range: U+100-130, U+132-151, U+154-17F; }",
+        "@font-face { font-family: \"Space Grotesk:Medium\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-latin-extended-b.woff2\"); font-display: block; unicode-range: U+180-24F; }",
+        "@font-face { font-family: \"Space Grotesk:Medium\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-latin-extended-additional.woff2\"); font-display: block; unicode-range: U+1E00-1EFF; }",
+        "@font-face { font-family: \"Space Grotesk:Medium\"; font-style: normal; src: url(\"/_woff/v2/SpaceGrotesk_wght__1/SpaceGrotesk_wght__1-rest.woff2\"); font-display: block; unicode-range: U+250-2AF, U+300-1DFF, U+1F00-1FFF, U+2070-2073, U+2075-20AB, U+20AD-2121, U+2123-218F, U+21BC-2211, U+2213-2214, U+2216-F8FE, U+F900-FEFE, U+FF00-FFFC, U+FFFE-FFFF; }"
+      ],
+      "images": [
+        {
+          "alt": "Portrait",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/d87578ab58457b66613696b47285e464d1b39ad7.png"
+        },
+        {
+          "alt": "",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/f270c0052a1669d6b3ccfd3832e0abae4c88f1d0.svg"
+        },
+        {
+          "alt": "Merch bag",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/b112737de0dce4f8590ecd6534ab481b54298452.png"
+        },
+        {
+          "alt": "Paid and organic examples",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/6e8cf26e38209c4b6bc7571be00d07939ea28e95.png"
+        },
+        {
+          "alt": "Illustration laptop",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/fbb477b3e7990577d212b38ca05cb4b79b56d378.png"
+        },
+        {
+          "alt": "Illustration Laptop 2",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/951146b0a1c274bc1cb55bf362690d3069e074db.png"
+        },
+        {
+          "alt": "Monas photo gallery",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/d470d8c2eebe4beb9e49fe1cea98c8e82b0231ef.png"
+        }
+      ],
+      "text": "Brand Designer · Offenburg, Germany\n\nHi, I’m Mona.\n\nI make brands feel clear & human.\n\nI design visual identities, useful guidelines and content that brings a brand to life – on screen and beyond.\n\n8+ years in design. Currently at Shine, previously at sevdesk. I care about coherent brands and giving teams the tools to keep them that way.\n\nExplore my work ↓\n\nGet in touch ↗\n\nSelected work\n\nBrands in practice.\n\nFour ways I turn a visual identity into something people can use, recognise and connect with.\n\n01 / Guidelines · Documentation · Brand rollout\n\nBrand guidelines\n\nA clear foundation for a consistent brand.\n\nsevdesk: Co-developed and maintained guidelines; supported the 2025 rebrand.\nShine: Refining existing guidelines and making them easier for teams to apply.\n\nView brand guidelines →\n\n02 / Merch Design · Booth assets · Brand application\n\nMerch & brand experience\n\nFrom screen to something tangible.\n\nCreated branded merchandise and offline touchpoints, including a trade fair experience for Shine.\n\nView merch & brand experience →\n\n03 / Social design · Templates · Creative delivery\n\nPaid & organic content\n\nOne brand. Many formats and markets.\n\nDesigned paid and organic assets, built 50+ Figma Buzz templates and enabled 4+ teams to create on-brand content.\n\nView paid & organic content →\n\n04 / Visual exploration · Curation · Brand consistency\n\nAI-assisted imagery\n\nNew tools. Same care for consistency.\n\nUsed AI for on-brand imagery, illustrations and layouts while keeping the visual direction consistent.\n\nView ai-assisted imagery →\n\nAway from keyboard\n\nWhen I close my laptop, design doesn’t leave.\n\nI keep seeking it out because it fills me with joy and fuels my creativity. I take photos, draw and visit museums. What I love most is discovering work that looks effortless, then learning through my own attempts how much skill and craft it takes to execute an idea well. That respect for craft carries into everything I design.\n\nLet’s talk\n\nWant to know more about my work?\n\nmonaschmidt.design@gmail.com ↗\n\nMona Schmidt · Brand Designer\n\nBack to top ↑\n\nMona Schmidt\n\nAbout\n\nWork\n\nAFK\n\nContact"
+    },
+    "brand": {
+      "images": [
+        {
+          "alt": "",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/66ab46d5c870cd7e4b45bd920207b96a6e84339b.svg"
+        },
+        {
+          "alt": "guidelines",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/8c946dd83c4dc0920ce6f4a7e074429714c5a9e9.png"
+        },
+        {
+          "alt": "image text",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/f0ad396df93df11cb0487c09a1b1356e74089fb0.png"
+        },
+        {
+          "alt": "image text",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/fe328ee15849ca7d3bad8468ed8bfb53d95c1175.png"
+        },
+        {
+          "alt": "",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/da5128c8762b59a4a429d30446e20b4d144020f5.svg"
+        },
+        {
+          "alt": "Shine logo",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/a868f215a98c1dd54b9a204e076af1bfd796516d.png"
+        }
+      ],
+      "links": [
+        {
+          "href": "/",
+          "text": "Mona Schmidt"
+        },
+        {
+          "href": "/",
+          "text": "About"
+        },
+        {
+          "href": "/",
+          "text": "Work"
+        },
+        {
+          "href": "/",
+          "text": "AFK"
+        },
+        {
+          "href": "/",
+          "text": "Contact"
+        },
+        {
+          "href": "/",
+          "text": "← All work"
+        },
+        {
+          "href": "/paid-and-organic-content",
+          "text": "Go to paid & organic content →"
+        },
+        {
+          "href": "/merch-and-brand-experience",
+          "text": "Merch & brand experience →"
+        },
+        {
+          "href": "/",
+          "text": "← Back to previous page"
+        },
+        {
+          "href": "/brand-guidelines",
+          "text": "Back to top ↑"
+        }
+      ],
+      "paragraphs": [
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Mona Schmidt"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "About"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "AFK"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Contact"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "← All work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "01 / Brand guidelines"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Brand guidelines teams can actually use"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "I help turn a visual identity into clear, practical guidance – so a brand stays consistent as the company grows."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "sevdesk"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Co-developed and maintained guidelines; supported the 2025 rebrand."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Explore sevdesk ↓"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Shine"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Helping refine existing guidelines through asset creation, gap documentation and template rules."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Explore Shine ↓"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "01 / sevdesk · 2025 rebrand"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Putting a refreshed brand into practice."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "As part of the in-house design team, I helped implement the new brand elements, documented how to use them and kept their application consistent."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "MY ROLE  /  Rebrand implementation · Documentation · Onboarding · Quality control"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "sevdesk · The brand identity our team helped implement and document."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "What I worked on"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 30px / 36px \"Space Grotesk:Medium\", sans-serif",
+          "text": "01"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Implement the new brand elements"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Our team worked on applying the refreshed colour palette, new illustrations and shapes – including shapes used as background motifs or animated components."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 30px / 36px \"Space Grotesk:Medium\", sans-serif",
+          "text": "02"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Turn the assets into shared guidelines"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "We first documented usage guidelines in zeroheight, then moved to Standards as our company-wide single source of truth. A Figma overview supported the migration; the logo package and font were available to download from Standards."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 30px / 36px \"Space Grotesk:Medium\", sans-serif",
+          "text": "03"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Apply the direction across touchpoints"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "During the documentation process and afterwards, we used this foundation to create paid and organic content, merchandise and illustrations."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 30px / 36px \"Space Grotesk:Medium\", sans-serif",
+          "text": "04"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Keep the application consistent"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "I monitored internal and external use of our brand visuals – checking, for example, that the logo was not distorted, recoloured or otherwise used incorrectly."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Guideline scope / Figma → Standards"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Foundations"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Logo · Colour · Typography"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Visual language"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Illustration · Shapes · Icons ·\nImage style · Look & feel"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Media & details"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Videos"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Access & adoption"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "One source. Easy access."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "PowerPoint & onboarding"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "I supported reviews of the sevdesk PowerPoint deck for completeness and ease of use. I also helped onboard new employees to the brand guidelines."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "SharePoint asset library"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Our team organised production assets in Microsoft SharePoint, with a clear folder structure and regularly updated asset libraries. Standards remained the single source of truth for the brand guidelines."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "See the guidelines in use"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Go to paid & organic content →"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "02 / Shine · WIP"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Building on what exists."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Documenting what’s next."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "I'm contributing to Shine’s evolving guidelines and asset library. As I create assets using the existing brand system, I document what we have, what is missing and what we could use next."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "MY ROLE  /  Asset creation · Gap documentation · Template guidelines"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "What creating assets is teaching us"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Illustration coverage"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Creating assets has shown us that the existing illustration set does not yet cover everything we want to communicate in the product or in advertising."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Colour & gradients"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "We noticed an over-reliance on two brand colours and a need to bring in more hues. This led to gradients that we are currently developing, refining and documenting together as a team."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Create → Identify gaps → Refine together → Document"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "The work is ongoing: practical needs from asset creation inform how we build out the library and develop the guidelines."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "From guidelines to reusable templates"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Make the details repeatable."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "I create templates based on the brand guidelines and document precise usage rules for these templates together with my design colleagues."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Typography"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Headline, subline and body-copy sizes"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Line height"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Layout, imagery & colour"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Corner radius · Padding · Image style"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Colour combinations"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 26px / 31.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Beyond the platform: Google Slides"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "I also support reviews of Shine’s Google Slides decks for completeness and ease of use – helping make the brand guidance practical in presentation formats, too."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Next / 02"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Merch & brand experience →"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "← Back to previous page"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Back to top ↑"
+        }
+      ],
+      "text": "Mona Schmidt\n\nAbout\n\nWork\n\nAFK\n\nContact\n\n← All work\n\n01 / Brand guidelines\n\nBrand guidelines teams can actually use\n\nI help turn a visual identity into clear, practical guidance – so a brand stays consistent as the company grows.\n\nsevdesk\n\nCo-developed and maintained guidelines; supported the 2025 rebrand.\n\nExplore sevdesk ↓\n\nShine\n\nHelping refine existing guidelines through asset creation, gap documentation and template rules.\n\nExplore Shine ↓\n\n01 / sevdesk · 2025 rebrand\n\nPutting a refreshed brand into practice.\n\nAs part of the in-house design team, I helped implement the new brand elements, documented how to use them and kept their application consistent.\n\nMY ROLE  /  Rebrand implementation · Documentation · Onboarding · Quality control\n\nsevdesk · The brand identity our team helped implement and document.\n\nWhat I worked on\n\n01\n\nImplement the new brand elements\n\nOur team worked on applying the refreshed colour palette, new illustrations and shapes – including shapes used as background motifs or animated components.\n\n02\n\nTurn the assets into shared guidelines\n\nWe first documented usage guidelines in zeroheight, then moved to Standards as our company-wide single source of truth. A Figma overview supported the migration; the logo package and font were available to download from Standards.\n\n03\n\nApply the direction across touchpoints\n\nDuring the documentation process and afterwards, we used this foundation to create paid and organic content, merchandise and illustrations.\n\n04\n\nKeep the application consistent\n\nI monitored internal and external use of our brand visuals – checking, for example, that the logo was not distorted, recoloured or otherwise used incorrectly.\n\nGuideline scope / Figma → Standards\n\nFoundations\n\nLogo · Colour · Typography\n\nVisual language\n\nIllustration · Shapes · Icons ·\nImage style · Look & feel\n\nMedia & details\n\nVideos\n\nAccess & adoption\n\nOne source. Easy access.\n\nPowerPoint & onboarding\n\nI supported reviews of the sevdesk PowerPoint deck for completeness and ease of use. I also helped onboard new employees to the brand guidelines.\n\nSharePoint asset library\n\nOur team organised production assets in Microsoft SharePoint, with a clear folder structure and regularly updated asset libraries. Standards remained the single source of truth for the brand guidelines.\n\nSee the guidelines in use\n\nGo to paid & organic content →\n\n02 / Shine · WIP\n\nBuilding on what exists.\n\nDocumenting what’s next.\n\nI'm contributing to Shine’s evolving guidelines and asset library. As I create assets using the existing brand system, I document what we have, what is missing and what we could use next.\n\nMY ROLE  /  Asset creation · Gap documentation · Template guidelines\n\nWhat creating assets is teaching us\n\nIllustration coverage\n\nCreating assets has shown us that the existing illustration set does not yet cover everything we want to communicate in the product or in advertising.\n\nColour & gradients\n\nWe noticed an over-reliance on two brand colours and a need to bring in more hues. This led to gradients that we are currently developing, refining and documenting together as a team.\n\nCreate → Identify gaps → Refine together → Document\n\nThe work is ongoing: practical needs from asset creation inform how we build out the library and develop the guidelines.\n\nFrom guidelines to reusable templates\n\nMake the details repeatable.\n\nI create templates based on the brand guidelines and document precise usage rules for these templates together with my design colleagues.\n\nTypography\n\nHeadline, subline and body-copy sizes\n\nLine height\n\nLayout, imagery & colour\n\nCorner radius · Padding · Image style\n\nColour combinations\n\nBeyond the platform: Google Slides\n\nI also support reviews of Shine’s Google Slides decks for completeness and ease of use – helping make the brand guidance practical in presentation formats, too.\n\nNext / 02\n\nMerch & brand experience →\n\n← Back to previous page\n\nBack to top ↑"
+    },
+    "merch": {
+      "images": [
+        {
+          "alt": "cap",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/599bd5f7c6e0386a8592b44978230dea1a26b4b9.png"
+        },
+        {
+          "alt": "backpack",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/e69baa76dda5a2312c20653a304533719c91febe.png"
+        },
+        {
+          "alt": "embroidery logo",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/76df7db7d5f9ca03afb5b031a3fa95a9e0449410.png"
+        },
+        {
+          "alt": "moodboard",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/eb426ea43220d2f60ad55356317c6d835ec3c880.png"
+        },
+        {
+          "alt": "cap",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/599bd5f7c6e0386a8592b44978230dea1a26b4b9.png"
+        },
+        {
+          "alt": "backpack",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/42b8d9eaf5612ebe8700e7e61c113ae978ebcce5.png"
+        },
+        {
+          "alt": "embroidery logo",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/76df7db7d5f9ca03afb5b031a3fa95a9e0449410.png"
+        },
+        {
+          "alt": "moodboard",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/eb426ea43220d2f60ad55356317c6d835ec3c880.png"
+        }
+      ],
+      "links": [
+        {
+          "href": "/",
+          "text": "Mona Schmidt"
+        },
+        {
+          "href": "/",
+          "text": "About"
+        },
+        {
+          "href": "/",
+          "text": "Work"
+        },
+        {
+          "href": "/",
+          "text": "AFK"
+        },
+        {
+          "href": "/",
+          "text": "Contact"
+        },
+        {
+          "href": "/",
+          "text": "← All work"
+        },
+        {
+          "href": "/paid-and-organic-content",
+          "text": "Paid & organic content →"
+        },
+        {
+          "href": "/brand-guidelines",
+          "text": "← Back to previous page"
+        },
+        {
+          "href": "/merch-and-brand-experience",
+          "text": "Back to top ↑"
+        },
+        {
+          "href": "/",
+          "text": "Mona Schmidt"
+        },
+        {
+          "href": "/",
+          "text": "About"
+        },
+        {
+          "href": "/",
+          "text": "Work"
+        },
+        {
+          "href": "/",
+          "text": "AFK"
+        },
+        {
+          "href": "/",
+          "text": "Contact"
+        },
+        {
+          "href": "/",
+          "text": "← All work"
+        },
+        {
+          "href": "/paid-and-organic-content",
+          "text": "Paid & organic content →"
+        },
+        {
+          "href": "/brand-guidelines",
+          "text": "← Back to previous page"
+        },
+        {
+          "href": "/merch-and-brand-experience",
+          "text": "Back to top ↑"
+        }
+      ],
+      "paragraphs": [
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Mona Schmidt"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "About"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "AFK"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Contact"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "← All work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "02 / Merch & brand experience"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "From visual identity to real-life brand experience."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "Merchandise for sevdesk and Shine – from company culture to everyday brand encounters."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My role"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Merchandise design"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Brand application across products, print and physical spaces"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Context"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "sevdesk & Shine"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Internal & external merchandise"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 13px / 14.95px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Production partners"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Monday Merch · Sugarcoat"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "01 / sevdesk"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "A brand to belong to."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "For sevdesk, I designed merchandise for the people behind the brand and the people discovering it – from onboarding packages and anniversary gifts to trade fair goodies and print materials."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "For the outside world."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Trade fair goodies and brand materials: keychains, shirts, stickers and booth design, alongside brochures, flyers and business cards."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "For the team."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Employer branding and company merch: onboarding packages and anniversary gifts, with water bottles, backpacks, hoodies and caps."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "A small statement."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Focusing on details rather than a large logo."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "A recognisable but quiet presence."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Backpack as part of the onboarding package."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Production partner · Monday Merch"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "02 / Shine"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Lasting impressions."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "For Shine, my involvement has focused exclusively on external merchandise. Besides the booth layout, I developed goodies such as a notebook, keychain, microfiber cloth, embroidered longsleeve and tote bag (under NDA). Below you’ll find explorations that led to the final products."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Made to wear."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Part of the exploration for our sweaters and caps embroidery. Generated with Nano Banana. "
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Fair booth moodboard. "
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Curating the color palette and visual style and making decisions on materials, furnishings and details."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Production partner · Sugarcoat (for Merch)"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Merch and fair booth in action"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "500+ visitors"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Digitaliseringsdagen · Denmark"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "I created a brand experience for Digitaliseringsdagen – a trade fair in Denmark with 500+ visitors – covering the booth, merchandising and goodies. "
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Next / 03"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Paid & organic content →"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "← Back to previous page"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Back to top ↑"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Mona Schmidt"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "About"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "AFK"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Contact"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "← All work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "02 / Merch & brand experience"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "From visual identity to real-life brand experience."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "Merchandise for sevdesk and Shine – from company culture to everyday brand encounters."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My role"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Merchandise design"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Brand application across products, print and physical spaces"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Context"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "sevdesk & Shine"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Internal & external merchandise"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Production partners"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Monday Merch · Sugarcoat"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "01 / sevdesk"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "A brand to belong to."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "For sevdesk, I designed merchandise for the people behind the brand and the people discovering it – from onboarding packages and anniversary gifts to trade fair goodies and print materials."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "For the outside world."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Trade fair goodies and brand materials: keychains, shirts, stickers and booth design, alongside brochures, flyers and business cards."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "For the team."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Employer branding and company merch: onboarding packages and anniversary gifts, with water bottles, backpacks, hoodies and caps."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "A small statement."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Focusing on details rather than a large logo."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "A recognisable but quiet presence."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Backpack as part of the onboarding package."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Production partner · Monday Merch"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "02 / Shine"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Lasting impressions."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "For Shine, my involvement has focused exclusively on external merchandise. Besides the booth layout, I developed goodies such as a notebook, keychain, microfiber cloth, embroidered longsleeve and tote bag (under NDA). Below you’ll find explorations that led to the final products."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Made to wear."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Part of the exploration for our sweaters and caps embroidery. Generated with Nano Banana."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Fair booth moodboard."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Curating the color palette and visual style and making decisions on materials, furnishings and details."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Production partner · Sugarcoat (for Merch)"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Merch and fair booth in action"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "500+ visitors"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Digitaliseringsdagen · Denmark"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "I created a brand experience for Digitaliseringsdagen – a trade fair in Denmark with 500+ visitors – covering the booth, merchandising and goodies."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Next / 03"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Paid & organic content →"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "← Back to previous page"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Back to top ↑"
+        }
+      ],
+      "text": "Mona Schmidt\n\nAbout\n\nWork\n\nAFK\n\nContact\n\n← All work\n\n02 / Merch & brand experience\n\nFrom visual identity to real-life brand experience.\n\nMerchandise for sevdesk and Shine – from company culture to everyday brand encounters.\n\nMy role\n\nMerchandise design\n\nBrand application across products, print and physical spaces\n\nContext\n\nsevdesk & Shine\n\nInternal & external merchandise\n\nProduction partners\n\nMonday Merch · Sugarcoat\n\n01 / sevdesk\n\nA brand to belong to.\n\nFor sevdesk, I designed merchandise for the people behind the brand and the people discovering it – from onboarding packages and anniversary gifts to trade fair goodies and print materials.\n\nFor the outside world.\n\nTrade fair goodies and brand materials: keychains, shirts, stickers and booth design, alongside brochures, flyers and business cards.\n\nFor the team.\n\nEmployer branding and company merch: onboarding packages and anniversary gifts, with water bottles, backpacks, hoodies and caps.\n\nA small statement.\n\nFocusing on details rather than a large logo.\n\nA recognisable but quiet presence.\n\nBackpack as part of the onboarding package.\n\nProduction partner · Monday Merch\n\n02 / Shine\n\nLasting impressions.\n\nFor Shine, my involvement has focused exclusively on external merchandise. Besides the booth layout, I developed goodies such as a notebook, keychain, microfiber cloth, embroidered longsleeve and tote bag (under NDA). Below you’ll find explorations that led to the final products.\n\nMade to wear.\n\nPart of the exploration for our sweaters and caps embroidery. Generated with Nano Banana.\n\nFair booth moodboard.\n\nCurating the color palette and visual style and making decisions on materials, furnishings and details.\n\nProduction partner · Sugarcoat (for Merch)\n\nMerch and fair booth in action\n\n500+ visitors\n\nDigitaliseringsdagen · Denmark\n\nI created a brand experience for Digitaliseringsdagen – a trade fair in Denmark with 500+ visitors – covering the booth, merchandising and goodies.\n\nNext / 03\n\nPaid & organic content →\n\n← Back to previous page\n\nBack to top ↑"
+    },
+    "paid": {
+      "images": [
+        {
+          "alt": "bild",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/9e9dd73b8b32169ed060726a7999970e600f106f.png"
+        },
+        {
+          "alt": "illustration 1",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/dc340d8a9604e649e20a45c50cf66af84e5f15d4.png"
+        },
+        {
+          "alt": "bild",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/9e9dd73b8b32169ed060726a7999970e600f106f.png"
+        },
+        {
+          "alt": "paid ad",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/8884d0c0385584aaf9e63aa3b023900df5956f41.png"
+        },
+        {
+          "alt": "illustration 1",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/dc340d8a9604e649e20a45c50cf66af84e5f15d4.png"
+        }
+      ],
+      "links": [
+        {
+          "href": "/",
+          "text": "Mona Schmidt"
+        },
+        {
+          "href": "/",
+          "text": "About"
+        },
+        {
+          "href": "/",
+          "text": "Work"
+        },
+        {
+          "href": "/",
+          "text": "AFK"
+        },
+        {
+          "href": "/",
+          "text": "Contact"
+        },
+        {
+          "href": "/ai-assisted-imagery",
+          "text": "AI-assisted imagery →"
+        },
+        {
+          "href": "/merch-and-brand-experience",
+          "text": "← Back to previous page"
+        },
+        {
+          "href": "/paid-and-organic-content",
+          "text": "Back to top ↑"
+        },
+        {
+          "href": "/",
+          "text": "Mona Schmidt"
+        },
+        {
+          "href": "/",
+          "text": "About"
+        },
+        {
+          "href": "/",
+          "text": "Work"
+        },
+        {
+          "href": "/",
+          "text": "AFK"
+        },
+        {
+          "href": "/",
+          "text": "Contact"
+        },
+        {
+          "href": "/",
+          "text": "← All work"
+        },
+        {
+          "href": "/ai-assisted-imagery",
+          "text": "AI-assisted imagery →"
+        },
+        {
+          "href": "/merch-and-brand-experience",
+          "text": "← Back to previous page"
+        },
+        {
+          "href": "/paid-and-organic-content",
+          "text": "Back to top ↑"
+        }
+      ],
+      "paragraphs": [
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Mona Schmidt"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "About"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "AFK"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Contact"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "← All work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "03 / Paid and organic content"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "One brand."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Many areas of application."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "I design social content and reusable templates that help teams create a consistent brand presence across formats and markets."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My role"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Social design & templates"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Design execution, reusable formats and creative delivery"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "context"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "sevdesk & Shine"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "GER at sevdesk and Shine · DK, FR and GER at Shine"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "tools & scope"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Figma · Figma Buzz"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Paid & organic social"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "sevdesk, alles klar campaign"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The challenge"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Keep the output high. Keep the brand consistent."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "Social content needs to work across different topics, formats and markets without losing its identity. My role combines hands-on design with reusable formats and collaboration across marketing and product design."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "sevdesk · Native and paid examples"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My contribution"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Design the content"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Created paid and organic social assets, supporting content concepts and trend analysis at sevdesk."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Build reusable tools"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Created 50+ Figma Buzz templates for the Danish and French markets at Shine, enabling 4+ teams to produce on-brand assets independently."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Collaborate and deliver"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Worked with marketing, art direction, customer success and product design and guided freelancers and agencies from brief to final delivery."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "At Shine / Scope of my work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "50+"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Figma Buzz templates"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "4+"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Teams enabled"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "100+"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Social assets per month"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Template work: Danish and French markets. Monthly social and paid production: Denmark, Germany and France."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Next / 04"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "AI-assisted imagery →"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "← Back to previous page"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Back to top ↑"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Mona Schmidt"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "About"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "AFK"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Contact"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "← All work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "03 / Paid and organic content"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "One brand."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Many areas of application."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "I design social content and reusable templates that help teams create a consistent brand presence across formats and markets."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My role"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Social design & templates"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Design execution, reusable formats and creative delivery"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "context"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "sevdesk & Shine"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "GER at sevdesk and Shine · DK, FR and GER at Shine"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "tools & scope"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Figma · Figma Buzz"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Paid & organic social"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "sevdesk, alles klar campaign"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The challenge"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Keep the output high. Keep the brand consistent."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "Social content needs to work across different topics, formats and markets without losing its identity. My role combines hands-on design with reusable formats and collaboration across marketing and product design."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "sevdesk · Native and paid examples"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My contribution"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Design the content"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Created paid and organic social assets, supporting content concepts and trend analysis at sevdesk."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Build reusable tools"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Created 50+ Figma Buzz templates for the Danish and French markets at Shine, enabling 4+ teams to produce on-brand assets independently."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Collaborate and deliver"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Worked with marketing, art direction, customer success and product design and guided freelancers and agencies from brief to final delivery."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "At Shine / Scope of my work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 45px / 54px \"Space Grotesk:Medium\", sans-serif",
+          "text": "50+"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Figma Buzz templates"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 45px / 54px \"Space Grotesk:Medium\", sans-serif",
+          "text": "4+"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Teams enabled"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 45px / 54px \"Space Grotesk:Medium\", sans-serif",
+          "text": "100+"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Social assets per month"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Template work: Danish and French markets. Monthly social and paid production: Denmark, Germany and France."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Next / 04"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "AI-assisted imagery →"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "← Back to previous page"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Back to top ↑"
+        }
+      ],
+      "text": "Mona Schmidt\n\nAbout\n\nWork\n\nAFK\n\nContact\n\n← All work\n\n03 / Paid and organic content\n\nOne brand.\n\nMany areas of application.\n\nI design social content and reusable templates that help teams create a consistent brand presence across formats and markets.\n\nMy role\n\nSocial design & templates\n\nDesign execution, reusable formats and creative delivery\n\ncontext\n\nsevdesk & Shine\n\nGER at sevdesk and Shine · DK, FR and GER at Shine\n\ntools & scope\n\nFigma · Figma Buzz\n\nPaid & organic social\n\nsevdesk, alles klar campaign\n\nThe challenge\n\nKeep the output high. Keep the brand consistent.\n\nSocial content needs to work across different topics, formats and markets without losing its identity. My role combines hands-on design with reusable formats and collaboration across marketing and product design.\n\nsevdesk · Native and paid examples\n\nMy contribution\n\nDesign the content\n\nCreated paid and organic social assets, supporting content concepts and trend analysis at sevdesk.\n\nBuild reusable tools\n\nCreated 50+ Figma Buzz templates for the Danish and French markets at Shine, enabling 4+ teams to produce on-brand assets independently.\n\nCollaborate and deliver\n\nWorked with marketing, art direction, customer success and product design and guided freelancers and agencies from brief to final delivery.\n\nAt Shine / Scope of my work\n\n50+\n\nFigma Buzz templates\n\n4+\n\nTeams enabled\n\n100+\n\nSocial assets per month\n\nTemplate work: Danish and French markets. Monthly social and paid production: Denmark, Germany and France.\n\nNext / 04\n\nAI-assisted imagery →\n\n← Back to previous page\n\nBack to top ↑"
+    },
+    "ai": {
+      "images": [
+        {
+          "alt": "illustration",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/80f4350592c817263184390ebb3004ad53d994aa.png"
+        },
+        {
+          "alt": "illustration",
+          "src": "https://guitar-fence-23515820.figma.site/_assets/v11/80f4350592c817263184390ebb3004ad53d994aa.png"
+        }
+      ],
+      "links": [
+        {
+          "href": "/",
+          "text": "Mona Schmidt"
+        },
+        {
+          "href": "/",
+          "text": "About"
+        },
+        {
+          "href": "/",
+          "text": "Work"
+        },
+        {
+          "href": "/",
+          "text": "AFK"
+        },
+        {
+          "href": "/",
+          "text": "Contact"
+        },
+        {
+          "href": "/",
+          "text": "← All work"
+        },
+        {
+          "href": "/",
+          "text": "Explore all work →"
+        },
+        {
+          "href": "mailto:monaschmidt.design@gmail.com",
+          "text": "Or get in touch ↗"
+        },
+        {
+          "href": "/paid-and-organic-content",
+          "text": "← Back to previous page"
+        },
+        {
+          "href": "/ai-assisted-imagery",
+          "text": "Back to top ↑"
+        },
+        {
+          "href": "/",
+          "text": "Mona Schmidt"
+        },
+        {
+          "href": "/",
+          "text": "About"
+        },
+        {
+          "href": "/",
+          "text": "Work"
+        },
+        {
+          "href": "/",
+          "text": "AFK"
+        },
+        {
+          "href": "/",
+          "text": "Contact"
+        },
+        {
+          "href": "/",
+          "text": "← All work"
+        },
+        {
+          "href": "/",
+          "text": "Explore all work →"
+        },
+        {
+          "href": "mailto:monaschmidt.design@gmail.com",
+          "text": "Or get in touch ↗"
+        },
+        {
+          "href": "/paid-and-organic-content",
+          "text": "← Back to previous page"
+        },
+        {
+          "href": "/ai-assisted-imagery",
+          "text": "Back to top ↑"
+        }
+      ],
+      "paragraphs": [
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Mona Schmidt"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "About"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "AFK"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Contact"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "← All work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "04 / AI-assisted imagery"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "New tools."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Same care for consistency."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "I use AI to explore imagery, illustrations and layouts – while keeping the creative thinking and judgement my own."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My role"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "AI-assisted design"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Visual exploration, curation and on-brand application"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Context"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "sevdesk & Shine"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Supporting high-output brand and marketing work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Tools & scope"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Midjourney · Krea"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Nano Banana"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Image generation with Midjourney based on our sevdesk guidelines. "
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My POV"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The creative thinking stays mine."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "AI is part of my toolkit, not a replacement for a clear idea. I use it to amplify what I’m already doing: exploring visual directions and creating imagery that feels consistent with the brand."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "At sevdesk, I have used Midjourney and Nano Banana for on-brand imagery, illustrations, icons, layouts and UI elements to support high output demands while maintaining a consistent look and feel."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "How I put AI to work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Imagery & illustration"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Explore visual directions and create assets with a coherent brand feel."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Building an on-brand stock library"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "I also use image generation to expand our stock library. My takeaway: well-crafted AI imagery can feel far more on-brand than even carefully curated images from stock platforms."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Layouts & visual elements"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Support layout exploration and visual elements for brand and marketing work."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Selection & judgement"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Keep the idea, context and brand in focus. The tool helps create options; the creative decisions remain mine."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The principle"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The tool can change."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The brand should still feel like itself."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Curiosity matters, but so does consistency. I care about whether an image fits the brand and makes sense for the people seeing it – not simply whether it was made with a new tool."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Back to the overview"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Explore all work →"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Or get in touch ↗"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "← Back to previous page"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Back to top ↑"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 24px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Mona Schmidt"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "About"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "AFK"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 24px \"Inter:Regular\", sans-serif",
+          "text": "Contact"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "← All work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "04 / AI-assisted imagery"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "New tools."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 52px / 59.28px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Same care for consistency."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "20px / 30px \"Inter:Regular\", sans-serif",
+          "text": "I use AI to explore imagery, illustrations and layouts – while keeping the creative thinking and judgement my own."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My role"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "AI-assisted design"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Visual exploration, curation and on-brand application"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Context"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "sevdesk & Shine"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Supporting high-output brand and marketing work"
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Tools & scope"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Midjourney · Krea"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 20px / 23px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Nano Banana"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Image generation with Midjourney based on our sevdesk guidelines."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "My POV"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The creative thinking stays mine."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "AI is part of my toolkit, not a replacement for a clear idea. I use it to amplify what I’m already doing: exploring visual directions and creating imagery that feels consistent with the brand."
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "At sevdesk, I have used Midjourney and Nano Banana for on-brand imagery, illustrations, icons, layouts and UI elements to support high output demands while maintaining a consistent look and feel."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "How I put AI to work"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Imagery & illustration"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Explore visual directions and create assets with a coherent brand feel."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Building an on-brand stock library"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "I also use image generation to expand our stock library. My takeaway: well-crafted AI imagery can feel far more on-brand than even carefully curated images from stock platforms."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Layouts & visual elements"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Support layout exploration and visual elements for brand and marketing work."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Selection & judgement"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "18px / 27px \"Inter:Regular\", sans-serif",
+          "text": "Keep the idea, context and brand in focus. The tool helps create options; the creative decisions remain mine."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The principle"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The tool can change."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 24px / 28.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "The brand should still feel like itself."
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "16px / 19.2px \"Space Grotesk:Regular\", sans-serif",
+          "text": "Curiosity matters, but so does consistency. I care about whether an image fits the brand and makes sense for the people seeing it – not simply whether it was made with a new tool."
+        },
+        {
+          "color": "rgb(255, 102, 104)",
+          "font": "500 14px / 16.8px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Back to the overview"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 36px / 43.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Explore all work →"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "500 16px / 19.2px \"Space Grotesk:Medium\", sans-serif",
+          "text": "Or get in touch ↗"
+        },
+        {
+          "color": "rgb(75, 75, 75)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "← Back to previous page"
+        },
+        {
+          "color": "rgb(17, 17, 17)",
+          "font": "12px / 18px \"Inter:Regular\", sans-serif",
+          "text": "Back to top ↑"
+        }
+      ],
+      "text": "Mona Schmidt\n\nAbout\n\nWork\n\nAFK\n\nContact\n\n← All work\n\n04 / AI-assisted imagery\n\nNew tools.\n\nSame care for consistency.\n\nI use AI to explore imagery, illustrations and layouts – while keeping the creative thinking and judgement my own.\n\nMy role\n\nAI-assisted design\n\nVisual exploration, curation and on-brand application\n\nContext\n\nsevdesk & Shine\n\nSupporting high-output brand and marketing work\n\nTools & scope\n\nMidjourney · Krea\n\nNano Banana\n\nImage generation with Midjourney based on our sevdesk guidelines.\n\nMy POV\n\nThe creative thinking stays mine.\n\nAI is part of my toolkit, not a replacement for a clear idea. I use it to amplify what I’m already doing: exploring visual directions and creating imagery that feels consistent with the brand.\n\nAt sevdesk, I have used Midjourney and Nano Banana for on-brand imagery, illustrations, icons, layouts and UI elements to support high output demands while maintaining a consistent look and feel.\n\nHow I put AI to work\n\nImagery & illustration\n\nExplore visual directions and create assets with a coherent brand feel.\n\nBuilding an on-brand stock library\n\nI also use image generation to expand our stock library. My takeaway: well-crafted AI imagery can feel far more on-brand than even carefully curated images from stock platforms.\n\nLayouts & visual elements\n\nSupport layout exploration and visual elements for brand and marketing work.\n\nSelection & judgement\n\nKeep the idea, context and brand in focus. The tool helps create options; the creative decisions remain mine.\n\nThe principle\n\nThe tool can change.\n\nThe brand should still feel like itself.\n\nCuriosity matters, but so does consistency. I care about whether an image fits the brand and makes sense for the people seeing it – not simply whether it was made with a new tool.\n\nBack to the overview\n\nExplore all work →\n\nOr get in touch ↗\n\n← Back to previous page\n\nBack to top ↑"
+    }
+  }
+}
