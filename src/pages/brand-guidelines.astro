@@ -1,5 +1,6 @@
 ---
 import BrandFigure from '../components/BrandFigure.astro';
+import BrandIntroduction from '../components/BrandIntroduction.astro';
 import ContentGroups from '../components/ContentGroups.astro';
 import ContentRows from '../components/ContentRows.astro';
 import ExpertiseLayout from '../layouts/ExpertiseLayout.astro';
@@ -26,16 +27,7 @@ const { sevdesk, shine, scope, access, learning, templates } = content;
   </div>
 
   <section id="sevdesk" class="brand-section" aria-labelledby="sevdesk-heading">
-    <header class="brand-introduction copy-stack">
-      <p class="label">{sevdesk.label}</p>
-      <h2 id="sevdesk-heading">
-        {sevdesk.heading.map((line) => (
-          <span class="heading-line">{line}</span>
-        ))}
-      </h2>
-      <p class="brand-description">{sevdesk.description}</p>
-      <p class="role muted">{sevdesk.role}</p>
-    </header>
+    <BrandIntroduction introduction={sevdesk} brand="sevdesk" />
     <BrandFigure
       image={sevdesk.image}
       brand="sevdesk"
@@ -115,16 +107,7 @@ const { sevdesk, shine, scope, access, learning, templates } = content;
   </section>
 
   <section id="shine" class="brand-section" aria-labelledby="shine-heading">
-    <header class="brand-introduction copy-stack">
-      <p class="label">{shine.label}</p>
-      <h2 id="shine-heading">
-        {shine.heading.map((line) => (
-          <span class="heading-line">{line}</span>
-        ))}
-      </h2>
-      <p class="brand-description">{shine.description}</p>
-      <p class="role muted">{shine.role}</p>
-    </header>
+    <BrandIntroduction introduction={shine} brand="shine" />
     <BrandFigure image={shine.image} brand="shine" />
 
     <section class="body-section" aria-labelledby="learning-heading">
@@ -189,15 +172,6 @@ const { sevdesk, shine, scope, access, learning, templates } = content;
 
   .brand-section h2 {
     font-size: var(--text-section-heading);
-  }
-
-  .brand-description {
-    font-size: var(--text-subheading);
-  }
-
-  .role {
-    font: 500 var(--text-ui) / var(--leading-heading) var(--font-heading);
-    white-space: pre-wrap;
   }
 
   .body-section,
@@ -280,10 +254,6 @@ const { sevdesk, shine, scope, access, learning, templates } = content;
 
     .brand-section h2 {
       font-size: var(--text-section-heading-mobile);
-    }
-
-    #sevdesk .brand-description {
-      font-size: var(--text-body);
     }
 
     .callout {

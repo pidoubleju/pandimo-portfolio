@@ -13,7 +13,7 @@ Reuse coherent visual patterns without introducing a universal page builder.
 
 **Blocked by:** 01 — Browse the real front page and expertise introductions.
 
-**Status:** implemented; code review in progress
+**Status:** complete
 
 - [x] Migrate every existing body section, role statement, list, caption, callout,
       cross-link, and image with unchanged displayed copy.

@@ -1,0 +1,49 @@
+---
+interface Props {
+  introduction: {
+    label: string;
+    heading: string[];
+    description: string;
+    role: string;
+  };
+  brand: 'sevdesk' | 'shine';
+}
+
+const { introduction, brand } = Astro.props;
+---
+
+<header class:list={['brand-introduction', 'copy-stack', brand]}>
+  <p class="label">{introduction.label}</p>
+  <h2 id={`${brand}-heading`}>
+    {introduction.heading.map((line) => (
+      <span class="heading-line">{line}</span>
+    ))}
+  </h2>
+  <p class="brand-description">{introduction.description}</p>
+  <p class="role muted">{introduction.role}</p>
+</header>
+
+<style>
+  h2 {
+    font-size: var(--text-section-heading);
+  }
+
+  .brand-description {
+    font-size: var(--text-subheading);
+  }
+
+  .role {
+    font: 500 var(--text-ui) / var(--leading-heading) var(--font-heading);
+    white-space: pre-wrap;
+  }
+
+  @media (max-width: 700px) {
+    h2 {
+      font-size: var(--text-section-heading-mobile);
+    }
+
+    .sevdesk .brand-description {
+      font-size: var(--text-body);
+    }
+  }
+</style>
