@@ -23,17 +23,17 @@ const { introduction, metadata } = Astro.props.area.data;
 
 <style>
   .expertise-introduction {
-    margin-top: 2rem;
+    margin-top: var(--space-medium);
   }
 
   h1 {
     max-width: 52rem;
     font-size: var(--text-page-title);
-    line-height: 1.14;
+    line-height: var(--leading-page-title);
   }
 
   .introduction-description {
-    font-size: 1.25rem;
-    line-height: 1.5;
+    font-size: var(--text-subheading);
+    line-height: var(--leading-body);
   }
 </style>

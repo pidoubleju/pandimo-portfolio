@@ -55,3 +55,26 @@ are native anchors; this ticket emits no browser JavaScript.
 The Figma canvas provides visual reference access, but no exported design-token
 bundle or automated pixel-diff baseline. Exact desktop/mobile pixel equivalence
 has not been asserted. No missing home asset was replaced with invented material.
+
+## Ticket 01 code review
+
+The implement skill’s two-axis review compared baseline
+`b131a4d5a2729ceae18beb6e4457938ddacca966` to implementation `01d4ee3`.
+
+### Standards
+
+One low-priority documented finding: recurring typography, spacing and line-height
+values in components should use centralized tokens. Resolved by adding the
+missing scale tokens and applying them to recurring component rules. The reviewer
+also noted the two-line heading renderer shared by home and expertise introductions
+as optional duplication; it stays local because a new component would add an
+interface for two trivial lines without clarifying either composition.
+
+### Spec
+
+No actionable findings within ticket 01 scope. Exact copy, canonical preview
+records, native destinations, local assets and licensed fonts match the captured
+reference. Full bodies and the expandable menu remain correctly deferred.
+
+Review totals: Standards 1 low finding resolved, 1 optional heuristic retained;
+Spec 0 findings. Existing source/production checks pass after the token change.

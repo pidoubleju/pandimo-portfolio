@@ -15,7 +15,7 @@ Reuse coherent visual patterns without introducing a universal page builder.
 
 **Blocked by:** None (can start immediately).
 
-**Status:** implemented — review pending
+**Status:** complete
 
 - [x] The full front page includes the unchanged introduction, all four expertise
       previews, AFK artwork and copy, contact details, and existing labels.

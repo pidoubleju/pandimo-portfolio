@@ -28,27 +28,27 @@ const { items } = Astro.props;
   .metadata-group {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    padding-block: 1.5rem;
+    gap: var(--space-medium);
+    margin-top: var(--space-medium);
+    padding-block: var(--space-layout);
     border-block: 1px solid var(--line);
   }
 
   .metadata-heading {
-    margin-top: 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1.15;
+    margin-top: var(--space-tight);
+    font-size: var(--text-subheading);
+    line-height: var(--leading-metadata);
   }
 
   .metadata-description {
-    margin-top: 0.75rem;
-    font: 400 1rem / 1.2 var(--font-heading);
+    margin-top: var(--space-tight);
+    font: 400 var(--text-ui) / var(--leading-heading) var(--font-heading);
   }
 
   @media (max-width: 700px) {
     .metadata-group {
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: var(--space-layout);
     }
   }
 </style>

@@ -97,7 +97,7 @@ const { Content: AfkCopy } = await render(home);
 
 <style>
   .hero {
-    padding-block: 4.125rem var(--space-section);
+    padding-block: var(--space-hero-top) var(--space-section);
   }
 
   .portrait {
@@ -111,7 +111,7 @@ const { Content: AfkCopy } = await render(home);
   .hero-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: var(--space-medium);
   }
 
   .work-section {
@@ -125,8 +125,8 @@ const { Content: AfkCopy } = await render(home);
 
   .expertise-previews {
     display: grid;
-    gap: 3.125rem;
-    margin-top: 3.125rem;
+    gap: var(--space-preview);
+    margin-top: var(--space-preview);
   }
 
   .afk-section {
@@ -148,13 +148,13 @@ const { Content: AfkCopy } = await render(home);
   }
 
   .contact-section {
-    padding-block: var(--space-large) 2rem;
+    padding-block: var(--space-large) var(--space-medium);
   }
 
   .email-link {
     display: block;
     width: fit-content;
-    font-size: 1.25rem;
+    font-size: var(--text-subheading);
     overflow-wrap: anywhere;
     text-decoration: none;
   }
@@ -167,8 +167,8 @@ const { Content: AfkCopy } = await render(home);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
-    font-size: 0.75rem;
+    gap: var(--space-small);
+    font-size: var(--text-small);
     color: var(--muted);
   }
 
@@ -178,7 +178,7 @@ const { Content: AfkCopy } = await render(home);
 
   @media (max-width: 700px) {
     .hero {
-      padding-top: 3rem;
+      padding-top: var(--space-mobile-hero);
     }
 
     .portrait {
@@ -192,7 +192,7 @@ const { Content: AfkCopy } = await render(home);
 
     .afk-art {
       min-height: 0;
-      padding-block: 1rem;
+      padding-block: var(--space-small);
     }
   }
 </style>

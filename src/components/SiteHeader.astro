@@ -28,14 +28,15 @@ const { site } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: var(--space-medium);
     min-height: var(--header-height);
-    padding: 2rem clamp(2.75rem, 5.625vw, 4.5rem);
+    padding: var(--space-medium) clamp(2.75rem, 5.625vw, 4.5rem);
     background: var(--paper);
   }
 
   .wordmark {
-    font: 500 1.25rem / 1.2 var(--font-heading);
+    font: 500 var(--text-subheading) / var(--leading-heading)
+      var(--font-heading);
     white-space: nowrap;
   }
 
@@ -50,21 +51,21 @@ const { site } = Astro.props;
   nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem 2rem;
-    font-size: 1rem;
+    gap: var(--space-small) var(--space-medium);
+    font-size: var(--text-ui);
   }
 
   @media (max-width: 700px) {
     .site-header {
       align-items: flex-start;
       flex-direction: column;
-      gap: 1rem;
-      padding: 1.5rem var(--gutter);
+      gap: var(--space-small);
+      padding: var(--space-layout) var(--gutter);
     }
 
     nav {
-      gap: 0.5rem 1.25rem;
-      font-size: 0.875rem;
+      gap: 0.5rem var(--space-inline);
+      font-size: var(--text-label);
     }
 
     nav a {
