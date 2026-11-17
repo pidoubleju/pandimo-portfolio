@@ -1,0 +1,40 @@
+{
+  "note": "Original supplied portfolio artwork. No separate artwork license notice was exposed by the source. PNG delivery variants are lossless WebP, original SVGs and Shine PNG are delivered unchanged; the desktop sevdesk SVG scales to the mobile composition.",
+  "assets": [
+    {
+      "file": "sevdesk-logo.svg",
+      "source": "https://guitar-fence-23515820.figma.site/_assets/v11/66ab46d5c870cd7e4b45bd920207b96a6e84339b.svg",
+      "sha256": "af72542c891c9ae9ea2049c048606c8b7660783ab7481443eaaf2acbdf3fb5e0"
+    },
+    {
+      "file": "guidelines.png",
+      "source": "https://guitar-fence-23515820.figma.site/_assets/v11/8c946dd83c4dc0920ce6f4a7e074429714c5a9e9.png",
+      "sha256": "bab2664f5914512e60b97e1d82f7b91de1ffc9cfa7a3f2a046fcd32b7cf9041c"
+    },
+    {
+      "file": "image-text.png",
+      "source": "https://guitar-fence-23515820.figma.site/_assets/v11/f0ad396df93df11cb0487c09a1b1356e74089fb0.png",
+      "sha256": "e6f1fa9cadaf215a95aa664dcccc523601beba35a9b32f61146488ade96aa1dc"
+    },
+    {
+      "file": "image-text-line.png",
+      "source": "https://guitar-fence-23515820.figma.site/_assets/v11/fe328ee15849ca7d3bad8468ed8bfb53d95c1175.png",
+      "sha256": "bb8ba2dbf1a2cbfde723da4ed8b103558dfb84fdd337a5bfb74ded597e214a30"
+    },
+    {
+      "file": "guidelines-overview.svg",
+      "source": "https://guitar-fence-23515820.figma.site/_assets/v11/da5128c8762b59a4a429d30446e20b4d144020f5.svg",
+      "sha256": "a8a18fbc211465dad854812bb921fcdab2d7c1c164d54035e44e4e0469eedd4e"
+    },
+    {
+      "file": "shine-logo.png",
+      "source": "https://guitar-fence-23515820.figma.site/_assets/v11/a868f215a98c1dd54b9a204e076af1bfd796516d.png",
+      "sha256": "d7fe13c5fec74a899ddb882181624974bb31e6f2ad84250e0d2eb12616fe3cef"
+    },
+    {
+      "file": "sevdesk-logo-mobile.svg",
+      "source": "https://guitar-fence-23515820.figma.site/_assets/v11/77482434f320a96b696b111627f40ae2ccadc939.svg",
+      "sha256": "2d9f20dda83493316f0ce3e06162a31cda51086bb44f91dc119e9cd4c36fe8cc"
+    }
+  ]
+}

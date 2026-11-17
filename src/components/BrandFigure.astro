@@ -1,0 +1,66 @@
+---
+import { withBase } from '../lib/paths';
+
+interface Props {
+  image: { src: string; width: number; height: number; alt: string };
+  brand: 'sevdesk' | 'shine';
+  caption?: string;
+}
+
+const { image, brand, caption } = Astro.props;
+---
+
+<figure>
+  <div class:list={['brand-panel', brand]}>
+    <img
+      src={withBase(image.src)}
+      width={image.width}
+      height={image.height}
+      alt={image.alt}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  {caption && <figcaption class="muted">{caption}</figcaption>}
+</figure>
+
+<style>
+  .brand-panel {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 880 / 536;
+    border-radius: var(--radius);
+    margin-top: var(--space-layout);
+  }
+
+  .sevdesk {
+    background: var(--sevdesk-coral);
+  }
+
+  .shine {
+    background: var(--shine-green);
+  }
+
+  .sevdesk img {
+    width: 53.09%;
+  }
+
+  .shine img {
+    width: 40.23%;
+  }
+
+  figcaption {
+    margin-top: var(--space-copy);
+    font: 400 var(--text-ui) / var(--leading-heading) var(--font-heading);
+  }
+
+  @media (max-width: 700px) {
+    .brand-panel {
+      aspect-ratio: 1;
+    }
+
+    .shine img {
+      width: 51.52%;
+    }
+  }
+</style>

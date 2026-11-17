@@ -1,8 +1,301 @@
 ---
+import BrandFigure from '../components/BrandFigure.astro';
+import ContentGroups from '../components/ContentGroups.astro';
+import ContentRows from '../components/ContentRows.astro';
 import ExpertiseLayout from '../layouts/ExpertiseLayout.astro';
 import { getExpertise } from '../lib/content';
+import { withBase } from '../lib/paths';
 
 const area = await getExpertise('brand-guidelines');
+const content = area.data.brandGuidelines;
+if (!content) throw new Error('Brand guidelines body content is missing');
+const { sevdesk, shine, scope, access, learning, templates } = content;
 ---
 
-<ExpertiseLayout area={area} />
+<ExpertiseLayout area={area}>
+  <div class="brand-exploration">
+    {(['sevdesk', 'shine'] as const).map((brand) => (
+      <div class="copy-stack">
+        <h2>{content.exploration[brand].heading}</h2>
+        <p class="muted">{content.exploration[brand].description}</p>
+        <a class="text-link" href={`#${brand}`}>
+          {content.exploration[brand].linkLabel}
+        </a>
+      </div>
+    ))}
+  </div>
+
+  <section id="sevdesk" class="brand-section" aria-labelledby="sevdesk-heading">
+    <header class="brand-introduction copy-stack">
+      <p class="label">{sevdesk.label}</p>
+      <h2 id="sevdesk-heading">
+        {sevdesk.heading.map((line) => (
+          <span class="heading-line">{line}</span>
+        ))}
+      </h2>
+      <p class="brand-description">{sevdesk.description}</p>
+      <p class="role muted">{sevdesk.role}</p>
+    </header>
+    <BrandFigure
+      image={sevdesk.image}
+      brand="sevdesk"
+      caption={sevdesk.caption}
+    />
+
+    <section class="body-section" aria-labelledby="work-heading">
+      <h3 id="work-heading" class="label">
+        {content.work.label}
+      </h3>
+      <div class="rows">
+        <ContentRows items={content.work.items} numbered />
+      </div>
+    </section>
+
+    <section
+      class="scope-callout callout copy-stack"
+      aria-labelledby="scope-heading"
+    >
+      <h3 id="scope-heading" class="label">
+        {scope.label}
+      </h3>
+      <ContentGroups groups={scope.groups} />
+    </section>
+    <div class="guideline-media">
+      <figure class="palette-tile">
+        <img
+          src={withBase(scope.palette.src)}
+          width={scope.palette.width}
+          height={scope.palette.height}
+          alt={scope.palette.alt}
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+      <figure class="typography-tile">
+        <img
+          src={withBase(scope.typography.src)}
+          width={scope.typography.width}
+          height={scope.typography.height}
+          alt={scope.typography.alt}
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          src={withBase(scope.typographyDetail.src)}
+          width={scope.typographyDetail.width}
+          height={scope.typographyDetail.height}
+          alt={scope.typographyDetail.alt}
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+      <figure class="shapes-tile">
+        <img
+          src={withBase(scope.shapes.src)}
+          width={scope.shapes.width}
+          height={scope.shapes.height}
+          alt={scope.shapes.alt}
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+    </div>
+
+    <section class="body-section copy-stack" aria-labelledby="access-heading">
+      <p class="label">{access.label}</p>
+      <h2 id="access-heading">{access.heading}</h2>
+      <ContentRows items={access.items} />
+      <div class="guidelines-link">
+        <p class="label">{access.linkHeading}</p>
+        <a class="text-link" href={withBase('paid-and-organic-content/')}>
+          {access.linkLabel}
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <section id="shine" class="brand-section" aria-labelledby="shine-heading">
+    <header class="brand-introduction copy-stack">
+      <p class="label">{shine.label}</p>
+      <h2 id="shine-heading">
+        {shine.heading.map((line) => (
+          <span class="heading-line">{line}</span>
+        ))}
+      </h2>
+      <p class="brand-description">{shine.description}</p>
+      <p class="role muted">{shine.role}</p>
+    </header>
+    <BrandFigure image={shine.image} brand="shine" />
+
+    <section class="body-section" aria-labelledby="learning-heading">
+      <h3 id="learning-heading" class="label">
+        {learning.label}
+      </h3>
+      <div class="learning-grid">
+        {learning.items.map((item) => (
+          <div class="learning-item copy-stack">
+            <h3>{item.heading}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+      <div class="process copy-stack">
+        <h3>{content.process.heading}</h3>
+        <p class="muted">{content.process.description}</p>
+      </div>
+    </section>
+
+    <section class="callout copy-stack" aria-labelledby="templates-heading">
+      <p class="label">{templates.label}</p>
+      <h2 id="templates-heading">{templates.heading}</h2>
+      <p>{templates.description}</p>
+      <ContentGroups groups={templates.groups} />
+    </section>
+    <section class="slides copy-stack" aria-labelledby="slides-heading">
+      <h3 id="slides-heading">{content.slides.heading}</h3>
+      <p>{content.slides.description}</p>
+    </section>
+  </section>
+</ExpertiseLayout>
+
+<style>
+  .brand-exploration,
+  .learning-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-mobile-intro);
+  }
+
+  .brand-exploration {
+    margin-block: var(--space-large) var(--space-section);
+  }
+
+  .brand-exploration h2,
+  .learning-item h3,
+  .slides h3 {
+    font-size: var(--text-row-heading);
+  }
+
+  .brand-exploration .copy-stack > * + *,
+  .learning-item.copy-stack > * + *,
+  .process.copy-stack > * + *,
+  .slides.copy-stack > * + * {
+    margin-top: var(--space-tight);
+  }
+
+  .brand-section + .brand-section {
+    margin-top: var(--space-section);
+  }
+
+  .brand-section h2 {
+    font-size: var(--text-section-heading);
+  }
+
+  .brand-description {
+    font-size: var(--text-subheading);
+  }
+
+  .role {
+    font: 500 var(--text-ui) / var(--leading-heading) var(--font-heading);
+    white-space: pre-wrap;
+  }
+
+  .body-section,
+  .guideline-media,
+  .callout,
+  .slides {
+    margin-top: var(--space-layout);
+  }
+
+  .rows {
+    margin-top: var(--space-layout);
+  }
+
+  .callout {
+    background: var(--callout);
+    padding: var(--space-medium);
+  }
+
+  .guideline-media {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-medium);
+  }
+
+  .guideline-media figure {
+    aspect-ratio: 272 / 340;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .palette-tile {
+    display: grid;
+    place-items: center;
+    padding: var(--space-layout);
+    background: white;
+  }
+
+  .typography-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-medium) var(--space-layout);
+    background: var(--sevdesk-coral);
+  }
+
+  .shapes-tile img {
+    width: 100%;
+  }
+
+  .guidelines-link > a {
+    display: inline-block;
+    margin-top: var(--space-small);
+  }
+
+  .learning-grid {
+    margin-top: var(--space-layout);
+  }
+
+  .learning-item,
+  .slides {
+    padding-top: var(--space-layout);
+    border-top: 1px solid var(--line);
+  }
+
+  .process {
+    margin-top: var(--space-copy);
+  }
+
+  @media (max-width: 700px) {
+    .brand-exploration,
+    .learning-grid,
+    .guideline-media {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .brand-exploration {
+      margin-top: var(--space-section);
+      gap: var(--space-layout);
+    }
+
+    .brand-section h2 {
+      font-size: var(--text-section-heading-mobile);
+    }
+
+    #sevdesk .brand-description {
+      font-size: var(--text-body);
+    }
+
+    .callout {
+      padding: var(--space-medium);
+    }
+
+    .guideline-media figure {
+      aspect-ratio: 287 / 340;
+    }
+
+    .shapes-tile {
+      display: none;
+    }
+  }
+</style>

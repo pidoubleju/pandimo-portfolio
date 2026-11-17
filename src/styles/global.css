@@ -51,6 +51,8 @@
   --muted: #4b4b4b;
   --accent: #ff6668;
   --line: #e5e0da;
+  --sevdesk-coral: #fb523b;
+  --shine-green: #003725;
   --callout: #efe9e2;
   --font-body: Inter, Arial, sans-serif;
   --font-heading: 'Space Grotesk', Arial, sans-serif;
@@ -60,7 +62,10 @@
   --text-small: 0.75rem;
   --text-subheading: 1.25rem;
   --text-subsection: 1.5rem;
+  --text-row-heading: 1.625rem;
+  --text-number: 1.875rem;
   --text-section-heading: 2.25rem;
+  --text-section-heading-mobile: 2rem;
   --text-navigation-min: 1.75rem;
   --text-heading: 2rem;
   --text-page-title: 3.25rem;

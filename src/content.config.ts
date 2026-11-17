@@ -54,6 +54,52 @@ const pages = defineCollection({
   ]),
 });
 
+const proseItem = z.object({ heading: text, description: text });
+const brandIntroduction = z.object({
+  label: text,
+  heading: z.array(text).min(1),
+  description: text,
+  role: text,
+  image,
+});
+const contentGroup = z.object({ heading: text, lines: z.array(text).min(1) });
+const brandGuidelines = z.object({
+  exploration: z.object({
+    sevdesk: z.object({ heading: text, description: text, linkLabel: text }),
+    shine: z.object({ heading: text, description: text, linkLabel: text }),
+  }),
+  sevdesk: brandIntroduction.extend({ caption: text }),
+  work: z.object({
+    label: text,
+    items: z.array(proseItem.extend({ number: text })).length(4),
+  }),
+  scope: z.object({
+    label: text,
+    groups: z.array(contentGroup).length(3),
+    palette: image,
+    typography: image,
+    typographyDetail: image,
+    shapes: image,
+  }),
+  access: z.object({
+    label: text,
+    heading: text,
+    items: z.array(proseItem).length(2),
+    linkLabel: text,
+    linkHeading: text,
+  }),
+  shine: brandIntroduction,
+  learning: z.object({ label: text, items: z.array(proseItem).length(2) }),
+  process: proseItem,
+  templates: z.object({
+    label: text,
+    heading: text,
+    description: text,
+    groups: z.array(contentGroup).length(2),
+  }),
+  slides: proseItem,
+});
+
 const expertise = defineCollection({
   loader: glob({ pattern: '*.md', base: './src/content/expertise' }),
   schema: z.object({
@@ -78,6 +124,7 @@ const expertise = defineCollection({
         description: text.optional(),
       })
     ),
+    brandGuidelines: brandGuidelines.optional(),
     nextLabel: text.optional(),
     nextLinkLabel: text.optional(),
   }),

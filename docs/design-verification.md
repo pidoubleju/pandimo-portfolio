@@ -150,3 +150,63 @@ recorded accurately rather than presented as physical-device testing.
 Review totals: Standards 0 findings; Spec 0 findings. The root agent's final
 production runtime gate also passed at 320px: local module loaded, no overflow,
 toggle expansion, Escape collapse, and focus returned to the menu button.
+
+## Ticket 03: complete Brand guidelines
+
+The Brand desktop and mobile Figma frames were inspected on the signed-in canvas,
+including the desktop introduction, scope media, access rows and Shine template
+callout, and the mobile scope/access composition at 50% zoom. The desktop keeps
+an 880px column, two exploration columns, numbered work rows, three scope columns
+and three 272 × 340 media tiles. Mobile stacks the exploration, numbered rows,
+scope groups, access rows, learning columns and template groups. Its brand panels
+are square, and the palette and typography tiles stack; the decorative purple
+shape tile is deliberately absent from the original mobile composition. Flexible
+gutters and media proportions bridge the reference widths.
+
+All copy, roles, labels, captions, lists, callouts, and media references live in
+validated named `brandGuidelines` fields in the canonical Markdown record. The
+Astro page owns this page's composition. `ContentRows`, `ContentGroups`, and
+`BrandFigure` share the actual repeated row, grouped-detail and logo-panel
+patterns; they do not expose layout controls to content editors. The rendered
+main text matches the captured reference word for word after whitespace
+normalization, including the two-line Shine heading and the original role text.
+No hidden responsive copy is repeated.
+
+Six original artwork assets are local. The colour palette is 2059 × 1652, the
+headline artwork 1029 × 546, its specification line 830 × 93, the Shine logo
+708 × 158, and the two SVGs retain their original vectors (467.168 × 129.017 and
+272 × 340 view boxes). Original files, the source's additional mobile sevdesk SVG,
+source URLs and SHA-256 hashes remain in
+`.scratch/design-adaptation/source-assets/brand/`. The three palette/typography
+PNGs use lossless WebP delivery; SVGs and the Shine PNG are delivered unchanged.
+All six rendered images have explicit dimensions and descriptive alt text and
+load lazily. The desktop sevdesk vector scales to the mobile logo treatment.
+No separate artwork license notice was exposed by the supplied portfolio source;
+its artwork is retained as supplied, with no invented replacement or claim of an
+open license. Existing font and icon license notices remain retained.
+
+Existing source checks, `yarn validate`, and the `/portfolio-check/` production
+build and `check:build` pass. Browser inspection covered 1280px, 768px, 390px and
+320px without horizontal overflow, using both the source runtime and production
+output. The prefixed direct route loaded its local menu module, both original
+font families, and all six artwork URLs returned HTTP 200. Native exploration
+links reach `#sevdesk` and `#shine`, with the headings approximately 116px below
+the viewport top and the enhanced header 92px high. The body cross-link opens the
+prefixed Paid & organic content route. Header, previous, next and top targets
+also pass the existing local URL/fragment production check; the root agent
+checked direct-entry header navigation and the Shine anchor in the source runtime.
+
+A same-origin sandbox iframe without `allow-scripts` provided an actual
+script-disabled check at 320px under the repository prefix: all body content and
+native links remained, the menu toggle stayed hidden, and both exploration links
+reached their sections approximately 156px below the top, clearing the 132px
+fallback header. There was no horizontal overflow. Browser tools briefly lost
+their host, recovered, then disconnected again after the required anchor, media,
+responsive, cross-link and no-script checks. Additional repeated manual clicks
+of the already-verified shared previous/next/top navigation were not claimed.
+
+Only existing checks and browser verification were used, as requested; no tests
+or verifier coverage were added. The canvas reference is visually inspected, not
+an exported pixel-diff baseline, so exact pixel equivalence is not asserted.
+Production output is restored to domain-root hosting before handoff. No CMS
+connection or deployment was made.

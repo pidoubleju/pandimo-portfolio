@@ -1,0 +1,47 @@
+---
+interface Props {
+  groups: { heading: string; lines: string[] }[];
+}
+
+const { groups } = Astro.props;
+---
+
+<dl class="content-groups">
+  {groups.map((group) => (
+    <div>
+      <dt class="heading">{group.heading}</dt>
+      <dd class="muted">
+        {group.lines.map((line) => (
+          <p>{line}</p>
+        ))}
+      </dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  .content-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: var(--space-layout);
+  }
+
+  dt {
+    font-size: var(--text-subsection);
+  }
+
+  dd {
+    margin-top: var(--space-tight);
+    font: 400 var(--text-ui) / var(--leading-heading) var(--font-heading);
+  }
+
+  dd p {
+    white-space: pre-line;
+  }
+
+  @media (max-width: 700px) {
+    .content-groups {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
