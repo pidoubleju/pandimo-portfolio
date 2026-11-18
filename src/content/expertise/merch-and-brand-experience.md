@@ -59,7 +59,6 @@ merchBrandExperience:
           width: 1086
           height: 1448
           alt: A black onboarding backpack with a small white sevdesk logo near the base.
-    credit: Production partner · Monday Merch
   shine:
     label: 02 / Shine
     heading:
@@ -69,14 +68,14 @@ merchBrandExperience:
       - heading: Made to wear.
         description: Part of the exploration for our sweaters and caps embroidery. Generated with Nano Banana.
         image:
-          src: /images/merch/embroidery.webp
+          src: /images/merch/example-embroidery.webp
           width: 896
           height: 1200
           alt: Dark green Shine logo embroidery on textured cream fabric.
       - heading: Fair booth moodboard.
         description: Curating the color palette and visual style and making decisions on materials, furnishings and details.
         image:
-          src: /images/merch/moodboard.webp
+          src: /images/merch/moodboarding.webp
           width: 1760
           height: 1018
           alt: A Shine booth moodboard combining green and yellow furniture, pale materials, plants and organic forms.

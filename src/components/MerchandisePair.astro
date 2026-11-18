@@ -16,7 +16,7 @@ interface Props {
     mobileImage?: Image | undefined;
   }[];
   brand: 'sevdesk' | 'shine';
-  credit: string;
+  credit?: string;
 }
 
 const { figures, brand, credit } = Astro.props;
@@ -57,7 +57,7 @@ const { figures, brand, credit } = Astro.props;
     </figure>
   ))}
 </div>
-<p class="production-credit muted">{credit}</p>
+{credit && <p class="production-credit muted">{credit}</p>}
 
 <style>
   .merchandise-pair {

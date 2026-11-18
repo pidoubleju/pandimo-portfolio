@@ -32,7 +32,7 @@
       "sha256": "2a9a9d5d45964ea57821d86044e2eb2dc4f17faed3f631a169b2ccb31330dbaf",
       "format": "png",
       "delivery": {
-        "file": "embroidery.webp",
+        "file": "example-embroidery.webp",
         "width": 896,
         "height": 1200
       }
@@ -44,7 +44,7 @@
       "sha256": "982b15b2d2a3103f6ceff3b1ca84696e5a362cd4b3dd9bc7abb9dc341bdf9205",
       "format": "png",
       "delivery": {
-        "file": "moodboard.webp",
+        "file": "moodboarding.webp",
         "width": 1760,
         "height": 1018
       }

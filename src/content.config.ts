@@ -80,7 +80,6 @@ const merchBrandExperience = z.object({
   sevdesk: merchIntroduction.extend({
     audiences: z.array(proseItem).length(2),
     figures: z.array(merchFigure).length(2),
-    credit: text,
   }),
   shine: merchIntroduction.extend({
     figures: z.array(merchFigure).length(2),
