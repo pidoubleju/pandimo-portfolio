@@ -54,11 +54,6 @@ merchBrandExperience:
           width: 1086
           height: 1448
           alt: A black onboarding backpack with a small white sevdesk logo near the base.
-        mobileImage:
-          src: /images/merch/backpack-mobile.webp
-          width: 1086
-          height: 1448
-          alt: A black onboarding backpack with a small white sevdesk logo near the base.
   shine:
     label: 02 / Shine
     heading:

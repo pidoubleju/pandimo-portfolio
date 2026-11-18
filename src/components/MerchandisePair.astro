@@ -117,5 +117,18 @@ const { figures, brand, credit } = Astro.props;
       grid-template-columns: minmax(0, 1fr);
       gap: var(--space-layout);
     }
+
+    .media-tile {
+      aspect-ratio: auto;
+    }
+
+    picture {
+      height: auto;
+    }
+
+    .media-tile img {
+      width: 100%;
+      height: auto;
+    }
   }
 </style>
